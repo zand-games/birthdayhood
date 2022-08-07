@@ -19,9 +19,12 @@ export class InfoTab extends BaseComponent {
         <div class="tab">
         <h6>What's your name?</h6>
         <p>
-            <input placeholder="Name..." oninput="this.className = ''" name="fname">
+            <!-- <input placeholder="Name..." oninput="this.className = ''" name="fname"> -->            
         </p>
-
+        <h6>Your birthday</h6>
+        <p>
+           <!-- NOT Implemented -->
+        </p>
         </div>
     `;
 

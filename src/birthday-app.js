@@ -88,7 +88,6 @@ export class BirthdayApp extends BaseComponent {
         this.fixStepIndicator(n);
     }
     nextPrev(n) {
-        if (n == -1) return;
         var x = document.getElementsByClassName("tab");
         if (n == 1 && !this.validateForm()) return false;
         x[this.currentTab].style.display = "none";
@@ -115,7 +114,7 @@ export class BirthdayApp extends BaseComponent {
 
 
         }
-        if (valid) {
+        if (valid) {            
             document.getElementsByClassName("step")[this.currentTab].className += " finish";
         }
         return valid;
@@ -125,7 +124,12 @@ export class BirthdayApp extends BaseComponent {
         var i, x = document.getElementsByClassName("step");
         for (i = 0; i < x.length; i++) {
             x[i].className = x[i].className.replace(" active", "");
+            x[i].className = x[i].className.replace(" finish", "");            
         }
+        for (var j = 0; j < n; j++) {            
+        x[j].className += " finish";        
+        }
+
         x[n].className += " active";
     }
 }
