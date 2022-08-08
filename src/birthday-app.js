@@ -32,6 +32,8 @@ export class BirthdayApp extends BaseComponent {
             <form id="regForm">
               <h1 id="register">Birthdayhood</h1>
               <div class="all-steps" id="all-steps">
+                <!-- Steps -->
+
                 <birthday-step icon="fa-user"></birthday-step>
                 <birthday-step icon="fa-solid fa-shapes"></birthday-step>
                 <birthday-step
@@ -44,9 +46,12 @@ export class BirthdayApp extends BaseComponent {
                   icon="fa-solid fa-person-digging"
                 ></birthday-step>
               </div>
+              <!-- Tabs -->
+
+              <shape-tab></shape-tab>
+
               <info-tab></info-tab>
               <body-tab></body-tab>
-              <shape-tab></shape-tab>
               <mental-tab></mental-tab>
               <lost-tab></lost-tab>
               <social-tab></social-tab>
@@ -71,6 +76,9 @@ export class BirthdayApp extends BaseComponent {
                   <button type="button" id="nextBtn" @click="${this.next}">
                     <i class="fa fa-angle-double-right"></i>
                   </button>
+                  <button type="button" id="btnlog" @click="${this.log}">
+                    <i class="fa fa-info"></i>
+                  </button>
                 </div>
               </div>
             </form>
@@ -80,6 +88,16 @@ export class BirthdayApp extends BaseComponent {
     `;
   }
 
+  log() {
+    console.log("name: " + BirthdayStore.name);
+    console.log("year: " + BirthdayStore.year);
+    console.log("month: " + BirthdayStore.month);
+    console.log("day: " + BirthdayStore.day);
+    console.log("mental: " + BirthdayStore.mentalColor);
+    console.log("body: " + BirthdayStore.bodyColor);
+    console.log("lost: " + BirthdayStore.lost);
+    console.log("social: " + BirthdayStore.socialColor);
+  }
   firstUpdated() {
     super.firstUpdated();
     this.currentTab = 0;
@@ -122,15 +140,6 @@ export class BirthdayApp extends BaseComponent {
       document.getElementById("all-steps").style.display = "none";
       document.getElementById("register").style.display = "none";
       document.getElementById("text-message").style.display = "block";
-
-      console.log(BirthdayStore.name);
-      console.log(BirthdayStore.year);
-      console.log(BirthdayStore.month);
-      console.log(BirthdayStore.day);
-      console.log(BirthdayStore.mentalColor);
-      console.log(BirthdayStore.bodyColor);
-      console.log(BirthdayStore.lost);
-      console.log(BirthdayStore.socialColor);
     }
     this.showTab(this.currentTab);
   }

@@ -18,3 +18,14 @@ export default class Store {
 }
 
 export let BirthdayStore = new Store();
+
+export function validate(tab) {
+  switch (tab) {
+    case 0:
+      //if(BirthdayStore.name=="" || BirthdayStore.)
+      break;
+
+    default:
+      break;
+  }
+}

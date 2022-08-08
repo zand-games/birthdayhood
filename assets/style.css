@@ -118,10 +118,18 @@ button:focus {
 .thanks-message {
     display: none
 }
+.shape{
+    margin: 10rm;
 
-
-
-.square {
+}
+.shapescontainer{
+    display: inline-block;
+    height: 85px;
+    width: 85px;
+    background-color: transparent;
+    margin: 3px;;
+}
+/* .square {
       display: inline;
       height: 50px;
     width: 50px;
@@ -132,8 +140,8 @@ button:focus {
     display: grid;
    grid-template-columns: repeat(4, 1fr);
    grid-template-rows: repeat(4, 20px);
-  }
-  .circle {
+  } */
+  /* .circle {
     
     height: 50px;
     width: 50px;
@@ -163,4 +171,94 @@ button:focus {
       height: 50px;
       transform: skew(20deg);
       background: #555;
+  } */
+
+
+ 
+
+  
+
+  /* Screen larger than 600px? 2 column */
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  /* Screen larger than 900px? 3 columns */
+  @media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+  }
+
+
+  .cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: .5rem;
+    resize: both;
+
+  }
+  
+  .card {
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem;
+    height: 2rem;
+  }
+
+  svg {
+    width: 95%;
+    height: 95%;
+   }
+
+
+   .dot {
+    margin: 1rem;
+    height: 50px;
+    width: 50px;
+    background-color: #bbb;    
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .square {
+    margin: 1rem;
+    height: 50px;
+    width: 50px;
+    background-color: #bbb;    
+    border-color: #bbb;
+    display: inline-block;
+  }
+
+  .triangle {
+	width: 0;
+	height: 0;
+    margin: 1rem;
+    
+    display: inline-block;
+	border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+	border-bottom: 50px solid #bbb;
+}
+
+.pentagon {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    box-sizing: content-box;
+    border-width: 50px 18px 0;
+    margin: 1rem;
+    border-style: solid;
+    border-color: #bbb transparent;
+  }
+  .pentagon:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent #bbb;
   }
