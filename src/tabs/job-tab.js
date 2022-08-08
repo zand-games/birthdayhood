@@ -1,33 +1,25 @@
-import { LitElement, html } from 'lit';
-import { BaseComponent } from '../baseComponent';
-
+import { LitElement, html } from "lit";
+import { BaseComponent } from "../baseComponent";
+import "../utils/color-mood";
+import { BirthdayStore } from "../store";
 
 export class JobTab extends BaseComponent {
-
-    constructor() {
-        super();
-
-
-
-    }
-
-
-    render() {
-
-        return html`
-  
-        <div class="tab">
+  constructor() {
+    super();
+  }
+  update_color(e) {
+    BirthdayStore.jobColor = e.detail;
+  }
+  render() {
+    return html`
+      <div class="tab">
         <h6>How was your job?</h6>
         <p>
-            <!-- <input placeholder="Name..." oninput="this.className = ''" name="fname"> -->            
-            
+          <color-mood @color_changed="${this.update_color}"></color-mood>
         </p>
-        </div>
+      </div>
     `;
-
-    }
-
+  }
 }
 
-
-customElements.define('job-tab', JobTab);
+customElements.define("job-tab", JobTab);

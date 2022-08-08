@@ -1,33 +1,25 @@
-import { LitElement, html } from 'lit';
-import { BaseComponent } from '../baseComponent';
-
+import { LitElement, html } from "lit";
+import { BaseComponent } from "../baseComponent";
+import { BirthdayStore } from "../store";
 
 export class MentalTab extends BaseComponent {
+  constructor() {
+    super();
+  }
+  update_color(e) {
+    BirthdayStore.mentalColor = e.detail;
+  }
 
-    constructor() {
-        super();
-
-
-
-    }
-
-
-    render() {
-
-        return html`
-  
-        <div class="tab">
+  render() {
+    return html`
+      <div class="tab">
         <h6>How was your mental and emotional state last year?</h6>
         <p>
-            <!-- <input placeholder="Name..." oninput="this.className = ''" name="fname"> -->            
-            
+          <color-mood @color_changed="${this.update_color}"></color-mood>
         </p>
-        </div>
+      </div>
     `;
-
-    }
-
+  }
 }
 
-
-customElements.define('mental-tab', MentalTab);
+customElements.define("mental-tab", MentalTab);
