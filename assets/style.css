@@ -118,3 +118,49 @@ button:focus {
 .thanks-message {
     display: none
 }
+
+
+
+.square {
+      display: inline;
+      height: 50px;
+    width: 50px;
+    background-color: #555;
+  }
+
+  .wrapper {
+    display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(4, 20px);
+  }
+  .circle {
+    
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50%;
+  }
+  .triangle-up {
+      
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 50px solid #555;
+  }
+  
+  .parallelogram {
+      
+      width: 100px;
+      height: 50px;
+      transform: skew(20deg);
+      background: #555;
+  }
+  
+  .parallelogram {
+      
+      width: 100px;
+      height: 50px;
+      transform: skew(20deg);
+      background: #555;
+  }
