@@ -102,7 +102,7 @@ export class GrayMood extends LitElement {
         border: solid 1px #000000;
         border-radius: 8px;
         height: 20px;
-        width: 400px;
+        width: 100%;
         outline: none;
         transition: background 450ms ease-in;
         -webkit-appearance: none;
