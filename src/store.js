@@ -13,7 +13,8 @@ export default class Store {
     this.year = 0;
     this.month = 0;
     this.day = 0;
-    this.lost = false;
+    this.lostColor = "255;255;255;1";
+    this.shape = "";
   }
 }
 

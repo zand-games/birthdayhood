@@ -47,10 +47,8 @@ export class BirthdayApp extends BaseComponent {
                 ></birthday-step>
               </div>
               <!-- Tabs -->
-
-              <shape-tab></shape-tab>
-
               <info-tab></info-tab>
+              <shape-tab></shape-tab>
               <body-tab></body-tab>
               <mental-tab></mental-tab>
               <lost-tab></lost-tab>
@@ -89,14 +87,16 @@ export class BirthdayApp extends BaseComponent {
   }
 
   log() {
+    console.clear();
     console.log("name: " + BirthdayStore.name);
     console.log("year: " + BirthdayStore.year);
     console.log("month: " + BirthdayStore.month);
     console.log("day: " + BirthdayStore.day);
     console.log("mental: " + BirthdayStore.mentalColor);
     console.log("body: " + BirthdayStore.bodyColor);
-    console.log("lost: " + BirthdayStore.lost);
+    console.log("lost: " + BirthdayStore.lostColor);
     console.log("social: " + BirthdayStore.socialColor);
+    console.log("shape: " + BirthdayStore.shape);
   }
   firstUpdated() {
     super.firstUpdated();
@@ -106,15 +106,17 @@ export class BirthdayApp extends BaseComponent {
     );
   }
   next(e) {
-    console.log("next");
     this.nextPrev(1);
   }
   prev() {
-    console.log("prev");
     this.nextPrev(-1);
   }
   showTab(n) {
     var x = document.getElementsByClassName("tab");
+    if (!x[n]) {
+      this.log();
+      return;
+    }
     x[n].style.display = "block";
     if (n == 0) {
       document.getElementById("prevBtn").style.display = "none";
