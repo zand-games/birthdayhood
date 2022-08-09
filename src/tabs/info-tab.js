@@ -10,15 +10,15 @@ export class InfoTab extends BaseComponent {
   render() {
     return html`
       <div class="tab">
-        <h6>What's your name?</h6>
-        <p>
+        <!-- <h6>What's your name?</h6> -->
+        <!-- <p>
           <input
             placeholder="Name..."
             oninput="this.className = ''"
             name="fname"
             @change="${this.nameChanged}"
           />
-        </p>
+        </p> -->
         <h6>Your birthday</h6>
         <form>
           <div class="form-row">

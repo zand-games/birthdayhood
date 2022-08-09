@@ -24,6 +24,8 @@ export class ShapeTab extends BaseComponent {
     };
     var result = getSvgFunc(e.target);
 
+    // for all svgs change the background to default
+    // for selected svg change the backgroud
     BirthdayStore.shape = result;
   }
 
