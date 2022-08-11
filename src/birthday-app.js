@@ -85,7 +85,32 @@ export class BirthdayApp extends BaseComponent {
       </div>
     `;
   }
-
+  getAllRgb() {
+    var allRGB = [
+      parseInt(
+        (Number(BirthdayStore.mentalColor.split(";")[0]) +
+          Number(BirthdayStore.bodyColor.split(";")[0]) +
+          Number(BirthdayStore.lostColor.split(";")[0]) +
+          Number(BirthdayStore.socialColor.split(";")[0])) /
+          4
+      ),
+      parseInt(
+        (Number(BirthdayStore.mentalColor.split(";")[1]) +
+          Number(BirthdayStore.bodyColor.split(";")[1]) +
+          Number(BirthdayStore.lostColor.split(";")[1]) +
+          Number(BirthdayStore.socialColor.split(";")[1])) /
+          4
+      ),
+      parseInt(
+        (Number(BirthdayStore.mentalColor.split(";")[2]) +
+          Number(BirthdayStore.bodyColor.split(";")[2]) +
+          Number(BirthdayStore.lostColor.split(";")[2]) +
+          Number(BirthdayStore.socialColor.split(";")[2])) /
+          4
+      ),
+    ];
+    return allRGB;
+  }
   log() {
     console.clear();
     console.log("name: " + BirthdayStore.name);
@@ -97,7 +122,10 @@ export class BirthdayApp extends BaseComponent {
     console.log("lost: " + BirthdayStore.lostColor);
     console.log("social: " + BirthdayStore.socialColor);
     console.log("shape: " + BirthdayStore.shape);
+
+    console.log("Sum All RGB: " + this.getAllRgb());
   }
+
   firstUpdated() {
     super.firstUpdated();
     this.currentTab = 0;

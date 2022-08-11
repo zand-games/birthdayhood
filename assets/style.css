@@ -139,3 +139,8 @@ button:focus {
   stroke: rgb(0, 0, 0);
   stroke-width: 6px;
 }
+.headactive {
+  fill: rgb(95, 95, 95);
+  stroke: rgb(0, 0, 0);
+  stroke-width: 6px;
+}
