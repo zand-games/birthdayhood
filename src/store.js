@@ -13,8 +13,10 @@ export default class Store {
     this.year = 0;
     this.month = 0;
     this.day = 0;
+    this.age = 0;
     this.lostColor = "255;255;255;1";
     this.shape = "";
+    this.emoji = "";
   }
 }
 

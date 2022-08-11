@@ -1,6 +1,6 @@
 import { BirthdayStore } from "./store";
 import "./birthday-step";
-
+import ".//utils/helper";
 import "./tabs/info-tab";
 import "./tabs/shape-tab";
 import "./tabs/job-tab";
@@ -13,6 +13,10 @@ import "./tabs/finance-tab";
 import { LitElement, html } from "lit";
 import { BaseComponent } from "./baseComponent.js";
 import Store from "./store.js";
+import {
+  calculate_average_Color,
+  calculate_current_age,
+} from ".//utils/helper";
 
 export class BirthdayApp extends BaseComponent {
   constructor() {
@@ -85,32 +89,7 @@ export class BirthdayApp extends BaseComponent {
       </div>
     `;
   }
-  getAllRgb() {
-    var allRGB = [
-      parseInt(
-        (Number(BirthdayStore.mentalColor.split(";")[0]) +
-          Number(BirthdayStore.bodyColor.split(";")[0]) +
-          Number(BirthdayStore.lostColor.split(";")[0]) +
-          Number(BirthdayStore.socialColor.split(";")[0])) /
-          4
-      ),
-      parseInt(
-        (Number(BirthdayStore.mentalColor.split(";")[1]) +
-          Number(BirthdayStore.bodyColor.split(";")[1]) +
-          Number(BirthdayStore.lostColor.split(";")[1]) +
-          Number(BirthdayStore.socialColor.split(";")[1])) /
-          4
-      ),
-      parseInt(
-        (Number(BirthdayStore.mentalColor.split(";")[2]) +
-          Number(BirthdayStore.bodyColor.split(";")[2]) +
-          Number(BirthdayStore.lostColor.split(";")[2]) +
-          Number(BirthdayStore.socialColor.split(";")[2])) /
-          4
-      ),
-    ];
-    return allRGB;
-  }
+
   log() {
     console.clear();
     console.log("name: " + BirthdayStore.name);
@@ -123,7 +102,9 @@ export class BirthdayApp extends BaseComponent {
     console.log("social: " + BirthdayStore.socialColor);
     console.log("shape: " + BirthdayStore.shape);
 
-    console.log("Sum All RGB: " + this.getAllRgb());
+    console.log("Sum All RGB: " + calculate_average_Color());
+    console.log("Age: " + calculate_current_age());
+    console.log("Emoji: " + BirthdayStore.emoji);
   }
 
   firstUpdated() {
