@@ -144,3 +144,15 @@ button:focus {
   stroke: rgb(0, 0, 0);
   stroke-width: 6px;
 }
+
+
+.emoji-selected{
+  fill: black;
+
+}
+
+.emoji{
+  fill: transparent;
+  fill: rgb(98 92 92 / 77%);
+
+}

@@ -8,9 +8,9 @@ export class InfoTab extends BaseComponent {
   }
   firstUpdated() {
     super.firstUpdated();
-    var svgs = document.querySelectorAll(".svg-emoji");
+    var svgs = document.querySelectorAll('svg[name="svg-emoji"]');
     svgs.forEach((item) => {
-      item.className.baseVal = "head"; // for all svgs change the background to default
+      item.className.baseVal = "emoji"; // for all svgs change the background to default
       item.addEventListener("mousedown", (e) => this.svgClicked(e));
     });
   }
@@ -26,11 +26,11 @@ export class InfoTab extends BaseComponent {
     var result = getSvgFunc(e.target);
     // for selected svg change the backgroud
     if (result) {
-      var svgss = document.querySelectorAll("svg");
+      var svgss = document.querySelectorAll('svg[name="svg-emoji"]');
       svgss.forEach((item) => {
-        item.className.baseVal = "head";
+        item.className.baseVal = "emoji";
       });
-      document.getElementById(result).className.baseVal = "headactive";
+      document.getElementById(result).className.baseVal = "emoji-selected";
     }
 
     BirthdayStore.emoji = result;
@@ -91,7 +91,7 @@ export class InfoTab extends BaseComponent {
           viewBox="0 0 485 485"
           style="enable-background:new 0 0 485 485;"
           xmlns="http://www.w3.org/2000/svg"
-          class="svg-emoji"
+          name="svg-emoji"
         >
           <g>
             <path
@@ -113,7 +113,7 @@ export class InfoTab extends BaseComponent {
           viewBox="0 0 485 485"
           style="enable-background:new 0 0 485 485;"
           xmlns="http://www.w3.org/2000/svg"
-          class="svg-emoji"
+          name="svg-emoji"
         >
           <g>
             <path
@@ -151,7 +151,7 @@ export class InfoTab extends BaseComponent {
           viewBox="0 0 485 485"
           style="enable-background:new 0 0 485 485;"
           xmlns="http://www.w3.org/2000/svg"
-          class="svg-emoji"
+          name="svg-emoji"
         >
           <g>
             <path
@@ -188,6 +188,7 @@ export class InfoTab extends BaseComponent {
           viewBox="0 0 44 44"
           style="enable-background:new 0 0 44 44;"
           xmlns="http://www.w3.org/2000/svg"
+          name="svg-emoji"
         >
           <g>
             <circle cx="13" cy="16" r="3" />

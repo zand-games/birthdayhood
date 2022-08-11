@@ -8,7 +8,8 @@ export class ShapeTab extends BaseComponent {
 
   firstUpdated() {
     super.firstUpdated();
-    var svgs = document.querySelectorAll(".shape");
+    var svgs = document.querySelectorAll('svg[name="shape"]');
+
     svgs.forEach((item) => {
       item.className.baseVal = "head"; // for all svgs change the background to default
       item.addEventListener("mousedown", (e) => this.svgClicked(e));
@@ -27,7 +28,7 @@ export class ShapeTab extends BaseComponent {
 
     // for selected svg change the backgroud
     if (result) {
-      var svgss = document.querySelectorAll("svg");
+      var svgss = document.querySelectorAll('svg[name="shape"]');
       svgss.forEach((item) => {
         item.className.baseVal = "head";
       });
@@ -47,7 +48,7 @@ export class ShapeTab extends BaseComponent {
           height="85"
           viewBox="0 0 250 250"
           id="circle"
-          class="shape"
+          name="shape"
         >
           <circle r="120" cx="125" cy="125" />
         </svg>
@@ -57,7 +58,7 @@ export class ShapeTab extends BaseComponent {
           height="85"
           viewBox="0 0 250 250"
           id="triangle"
-          class="shape"
+          name="shape"
         >
           <path
             d="M 125.333 9.131 L 241.502 241.469 L 9.164 241.469 L 125.333 9.131 Z"
@@ -70,7 +71,7 @@ export class ShapeTab extends BaseComponent {
           height="85"
           viewBox="0 0 250 250"
           id="diamond"
-          class="shape"
+          name="shape"
         >
           <rect
             x="52"
@@ -86,7 +87,7 @@ export class ShapeTab extends BaseComponent {
           height="85"
           viewBox="0 0 250 250"
           id="penta"
-          class="shape"
+          name="shape"
         >
           <path
             d="m9.87002,97.1347l116.49985,-88.99785l116.50013,88.99785l-44.49889,144.00216l-144.00207,0l-44.49902,-144.00216z"
@@ -98,7 +99,7 @@ export class ShapeTab extends BaseComponent {
           height="85"
           viewBox="0 0 250 250"
           id="trapez"
-          class="shape"
+          name="shape"
         >
           <path
             d="m11.37499,234.30733l46.00001,-217.99998l184.00001,0l-46.00001,217.99998l-184.00001,0z"
@@ -109,7 +110,7 @@ export class ShapeTab extends BaseComponent {
           width="85"
           height="85"
           viewBox="0 0 250 250"
-          class="shape"
+          name="shape"
           id="hegxa"
         >
           <path
@@ -124,7 +125,7 @@ export class ShapeTab extends BaseComponent {
           height="85"
           viewBox="0 0 250 250"
           id="star"
-          class="shape"
+          name="shape"
         >
           <path
             d="M 124.855 11.495 L 165.54 80.08 L 242.409 98.141 L 190.685 158.59 L 197.508 238.337 L 124.855 207.111 L 52.202 238.337 L 59.025 158.59 L 7.301 98.141 L 84.17 80.08 Z"
