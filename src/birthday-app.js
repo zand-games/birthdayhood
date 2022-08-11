@@ -98,7 +98,8 @@ export class BirthdayApp extends BaseComponent {
     console.log("day: " + BirthdayStore.day);
     console.log("mental: " + BirthdayStore.mentalColor);
     console.log("body: " + BirthdayStore.bodyColor);
-    console.log("lost: " + BirthdayStore.lostColor);
+    console.log("lost: " + BirthdayStore.lost);
+    console.log("lost color: " + BirthdayStore.lostColor);
     console.log("social: " + BirthdayStore.socialColor);
     console.log("shape: " + BirthdayStore.shape);
 
