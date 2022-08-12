@@ -9,6 +9,7 @@ import "./tabs/social-tab";
 import "./tabs/body-tab";
 import "./tabs/mental-tab";
 import "./tabs/finance-tab";
+import "./birthday-result";
 import { LitElement, html } from "lit";
 import { BaseComponent } from "./baseComponent.js";
 import Store from "./store.js";
@@ -29,6 +30,8 @@ export class BirthdayApp extends BaseComponent {
   }
   render() {
     return html`
+      <birthday-result></birthday-result>
+
       <div class="container mt-5">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-md-8">
@@ -50,7 +53,6 @@ export class BirthdayApp extends BaseComponent {
                 ></birthday-step>
               </div>
               <!-- Tabs -->
-
               <info-tab></info-tab>
               <shape-tab></shape-tab>
               <body-tab></body-tab>
@@ -60,7 +62,7 @@ export class BirthdayApp extends BaseComponent {
               <job-tab></job-tab>
               <div id="result"></div>
               <div class="thanks-message text-center" id="text-message">
-                <img
+                <!-- <img
                   src="https://i.imgur.com/O18mJ1K.png"
                   width="100"
                   class="mb-4"
@@ -69,7 +71,8 @@ export class BirthdayApp extends BaseComponent {
                 <span
                   >Thanks for your valuable information. It helps us to improve
                   our services!</span
-                >
+                > -->
+                <birthday-result></birthday-result>
               </div>
               <div style="overflow:auto;" id="nextprevious">
                 <div style="float:right;">
@@ -152,8 +155,9 @@ export class BirthdayApp extends BaseComponent {
       document.getElementById("nextprevious").style.display = "none";
       document.getElementById("all-steps").style.display = "none";
       document.getElementById("register").style.display = "none";
+      document.getElementById("text-message").style.display = "block";
 
-      create_result_svg();
+      //create_result_svg();
     }
     this.showTab(this.currentTab);
   }
