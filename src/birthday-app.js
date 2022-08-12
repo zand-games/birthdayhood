@@ -9,15 +9,14 @@ import "./tabs/social-tab";
 import "./tabs/body-tab";
 import "./tabs/mental-tab";
 import "./tabs/finance-tab";
-
 import { LitElement, html } from "lit";
 import { BaseComponent } from "./baseComponent.js";
 import Store from "./store.js";
 import {
   calculate_average_Color,
   calculate_current_age,
+  create_result_svg,
 } from ".//utils/helper";
-
 export class BirthdayApp extends BaseComponent {
   constructor() {
     super();
@@ -51,6 +50,7 @@ export class BirthdayApp extends BaseComponent {
                 ></birthday-step>
               </div>
               <!-- Tabs -->
+
               <info-tab></info-tab>
               <shape-tab></shape-tab>
               <body-tab></body-tab>
@@ -58,6 +58,7 @@ export class BirthdayApp extends BaseComponent {
               <lost-tab></lost-tab>
               <social-tab></social-tab>
               <job-tab></job-tab>
+              <div id="result"></div>
               <div class="thanks-message text-center" id="text-message">
                 <img
                   src="https://i.imgur.com/O18mJ1K.png"
@@ -151,7 +152,8 @@ export class BirthdayApp extends BaseComponent {
       document.getElementById("nextprevious").style.display = "none";
       document.getElementById("all-steps").style.display = "none";
       document.getElementById("register").style.display = "none";
-      document.getElementById("text-message").style.display = "block";
+
+      create_result_svg();
     }
     this.showTab(this.currentTab);
   }

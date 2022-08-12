@@ -25,7 +25,6 @@ export class ShapeTab extends BaseComponent {
       }
     };
     var result = getSvgFunc(e.target);
-
     // for selected svg change the backgroud
     if (result) {
       var svgss = document.querySelectorAll('svg[name="shape"]');
