@@ -16,8 +16,8 @@ export default class Store {
 
     this.lostColor = "255;255;255;1";
     this.lost = true;
-    this.shape = "circle";
-    this.emoji = "happy";
+    this.shape = "star";
+    this.emoji = "grin";
 
     this.age = 45;
     this.hashtag = "37_blue_diamond";
