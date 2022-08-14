@@ -1,6 +1,7 @@
 import { LitElement, html, css } from "lit";
+import { BaseComponent } from "./baseComponent";
 import { BirthdayStore } from "./store";
-export class BirthdayResult extends LitElement {
+export class BirthdayResult extends BaseComponent {
   constructor() {
     super();
   }
@@ -466,6 +467,19 @@ export class BirthdayResult extends LitElement {
           ${BirthdayStore.age}
         </text>
       </svg>
+      <!-- <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+            <input
+                placeholder="Year"
+                type="text"
+                class="form-control"
+                id="year"
+                @change="${this.yearChanged}"
+              />
+            </div>
+            </div>
+        </form> -->
     `;
   }
 

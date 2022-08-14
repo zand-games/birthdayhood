@@ -4,11 +4,10 @@ import ".//utils/helper";
 import "./tabs/info-tab";
 import "./tabs/shape-tab";
 import "./tabs/job-tab";
-import "./tabs/lost-tab";
 import "./tabs/social-tab";
 import "./tabs/body-tab";
 import "./tabs/mental-tab";
-import "./tabs/finance-tab";
+import "./tabs/wish-tab";
 import "./birthday-result";
 import { LitElement, html } from "lit";
 import { BaseComponent } from "./baseComponent.js";
@@ -39,10 +38,12 @@ export class BirthdayApp extends BaseComponent {
                   icon="fa-solid fa-child-reaching"
                 ></birthday-step>
                 <birthday-step icon="fa-solid fa-brain"></birthday-step>
-                <birthday-step icon="fa-regular fa-face-meh"></birthday-step>
                 <birthday-step icon="fa-solid fa-people-group"></birthday-step>
                 <birthday-step
                   icon="fa-solid fa-person-digging"
+                ></birthday-step>
+                <birthday-step
+                  icon="fa-regular fa-comment-dots"
                 ></birthday-step>
               </div>
               <!-- Tabs -->
@@ -50,10 +51,9 @@ export class BirthdayApp extends BaseComponent {
               <shape-tab></shape-tab>
               <body-tab></body-tab>
               <mental-tab></mental-tab>
-              <lost-tab></lost-tab>
               <social-tab></social-tab>
               <job-tab></job-tab>
-              <div id="result"></div>
+              <wish-tab></wish-tab>
               <div class="thanks-message text-center" id="text-message">
                 <!-- <img
                   src="https://i.imgur.com/O18mJ1K.png"

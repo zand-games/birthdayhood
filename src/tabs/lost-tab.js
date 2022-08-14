@@ -18,9 +18,8 @@ export class lostTab extends BaseComponent {
 
   render() {
     return html`
-      <div class="tab">
+      <div class="">
         <h6>Someone from connections has died?</h6>
-
         <input
           id="lost_status"
           type="checkbox"

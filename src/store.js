@@ -16,12 +16,12 @@ export default class Store {
 
     this.lostColor = "150;150;150;1";
     this.lost = false;
-    this.shape = "diamond";
+    this.shape = "triangle";
     this.emoji = "happy";
 
     this.age = 0;
     this.hashtag = "37_blue_diamond";
-    this.wish = "let's build build build build a team together";
+    this.wish = "I wish a year full of health and love";
 
     this.avgcolor = "255,255,255";
     this.mentalColorResult = "33,40,92";

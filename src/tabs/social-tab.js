@@ -1,6 +1,7 @@
-import { LitElement, html } from "lit";
+import { html } from "lit";
 import { BaseComponent } from "../baseComponent";
 import { BirthdayStore } from "../store";
+import "./lost-tab";
 
 export class SocialTab extends BaseComponent {
   constructor() {
@@ -20,6 +21,7 @@ export class SocialTab extends BaseComponent {
         <p>
           <color-mood @color_changed="${this.update_color}"></color-mood>
         </p>
+        <lost-tab></lost-tab>
       </div>
     `;
   }
