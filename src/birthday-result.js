@@ -1,6 +1,8 @@
 import { html, css, LitElement } from "lit";
 import { BaseComponent } from "./baseComponent";
 import { BirthdayStore } from "./store";
+import { Canvg } from "https://cdn.skypack.dev/canvg";
+
 export class BirthdayResult extends LitElement {
   constructor() {
     super();
@@ -10,8 +12,8 @@ export class BirthdayResult extends LitElement {
     return html`
       <svg
         viewBox="0 0 300 400"
-        width="300px"
-        height="400px"
+        width="1024"
+        height="768"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
       >
@@ -190,13 +192,7 @@ export class BirthdayResult extends LitElement {
             />
           </clipPath>
           <g clip-path="url(#clip-3)">
-            <image
-              x="78"
-              y="226"
-              width="16"
-              height="16"
-              xlink:href="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAO xAGVKw4bAAAAXElEQVR4nKXMaQpAQACAUXP/M4hEGtuYpiFJkuQ69uUXh/jeAZ54 5+pzAPFMFgajYcE9aBZcfQmDrmDB2WYwaBIWHLVkwW5jGJiIBZsOWbCqAAa5z4Il 9WAgXRT8JmI1XydC094AAAAASUVORK5CYII="
-            />
+          
           </g>
           <path
             d="M84.285 229.65c1.335-.066 2.51-.603 3.59-1.426l.074-1.986-3.665 1.467v1.945z"
@@ -209,13 +205,7 @@ export class BirthdayResult extends LitElement {
             />
           </clipPath>
           <g clip-path="url(#v)">
-            <image
-              x="81"
-              y="219"
-              width="8"
-              height="9"
-              xlink:href="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAgAAAAJCAYAAAAPU20uAAAACXBIWXMAAA7EAAAO xAGVKw4bAAAAMUlEQVR4nGP8fWHvfwY8gJEKCs4TUnB2N34Fv07vxK/g58kdBBQc 34ZfwY+jW/AqAAAZdB+C/rnU3AAAAABJRU5ErkJggg=="
-            />
+            
           </g>
           <clipPath id="w">
             <path
@@ -224,13 +214,7 @@ export class BirthdayResult extends LitElement {
             />
           </clipPath>
           <g clip-path="url(#w)">
-            <image
-              x="78"
-              y="234"
-              width="5"
-              height="5"
-              xlink:href="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAACXBIWXMAAA7EAAAO xAGVKw4bAAAAJklEQVR4nGP8fWHvfwY0wPj77G5MwZ/HtmEKftu/AVPwy45VGIIA HcMRPEvHACMAAAAASUVORK5CYII="
-            />
+            
           </g>
           <path
             d="M80.057 228.51c-1.633-2.099-4.143-1.979-4.143-1.979s-2.51-.12-4.143 1.979a1.028 1.028 0 0 0-.148 1.083l1.13 2.793h6.322l1.13-2.793c.159-.39.11-.75-.148-1.083z"
@@ -309,54 +293,67 @@ export class BirthdayResult extends LitElement {
           rx="54.36"
           ry="50.841"
           visibility="${BirthdayStore.shape == "circle" ? "visible" : "hidden"}"
-          style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+          style="fill: rgb(${
+            BirthdayStore.avgcolor
+          }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
         />
         <path
-          visibility="${BirthdayStore.shape == "triangle"
-            ? "visible"
-            : "hidden"}"
+          visibility="${
+            BirthdayStore.shape == "triangle" ? "visible" : "hidden"
+          }"
           d="m54.725,191.58533l71.49999,-153.97521l71.49999,153.97521l-142.99998,0l0.00001,0z"
-          style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+          style="fill: rgb(${
+            BirthdayStore.avgcolor
+          }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
           transform="translate(23,30)"
         />
 
         <rect
-          visibility="${BirthdayStore.shape == "diamond"
-            ? "visible"
-            : "hidden"}"
+          visibility="${
+            BirthdayStore.shape == "diamond" ? "visible" : "hidden"
+          }"
           x="122"
           y="83"
           width="115"
           height="115"
-          style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+          style="fill: rgb(${
+            BirthdayStore.avgcolor
+          }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
           transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, 120.899485, -58.757852)"
         ></rect>
 
         <path
           visibility="${BirthdayStore.shape == "penta" ? "visible" : "hidden"}"
-          style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+          style="fill: rgb(${
+            BirthdayStore.avgcolor
+          }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
           d="m57.23623,107.52932l65.96469,-50.39247l65.96485,50.39247l-25.19622,81.53708l-81.53703,0l-25.19629,-81.53708z"
           transform="translate(25,37)"
         />
 
         <path
           visibility="${BirthdayStore.shape == "trapez" ? "visible" : "hidden"}"
-          style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+          style="fill: rgb(${
+            BirthdayStore.avgcolor
+          }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
           d="m54.37499,191.89865l28.40001,-134.5913l113.60001,0l-28.40001,134.5913l-113.60001,0z"
           transform="translate(21,45)"
         />
 
         <path
           visibility="${BirthdayStore.shape == "hegxa" ? "visible" : "hidden"}"
-          style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+          style="fill: rgb(${
+            BirthdayStore.avgcolor
+          }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
           d="m52.65999,125.1127l30.85714,-61.71428l82.28571,0l30.85713,61.71428l-30.85713,61.71428l-82.28571,0l-30.85714,-61.71428z"
           transform="translate(24,45)"
         />
         <path
           visibility="${BirthdayStore.shape == "star" ? "visible" : "hidden"}"
-          style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
-          d="M 87.3 11.495 L 114.988 59.871 L 167.299 72.61 L 132.099 115.247 L 136.742 171.495 L 87.3 149.471 L 37.858 171.495 L 42.501 115.247 L 7.301 72.61 L 59.612 59.871 Z"
-          bx:shape="star 87.3 99.941 84.116 88.446 0.56 5 1@085e9c15"
+          style="fill: rgb(${
+            BirthdayStore.avgcolor
+          }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+          d="M 87.3 11.495 L 114.988 59.871 L 167.299 72.61 L 132.099 115.247 L 136.742 171.495 L 87.3 149.471 L 37.858 171.495 L 42.501 115.247 L 7.301 72.61 L 59.612 59.871 Z"          
           transform="translate(62,70)"
         />
         <g
@@ -503,7 +500,7 @@ export class BirthdayResult extends LitElement {
             />
           </g>
         </g>
-        <!-- </g> -->
+        </g>
 
         <text
           style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16.3px;"
@@ -524,7 +521,52 @@ export class BirthdayResult extends LitElement {
           value="${this.get_hash_tags()}"
         />
       </div>
+      <div>
+        <button @click="${this.export_svg_to_img}" value="export to image">
+          Export to Image
+        </button>
+      </div>
+      <canvas id="myCanvas"></canvas>
+      <a display="none" id="link"></a>
     `;
+  }
+  async export_svg_to_img() {
+    let v = null;
+    const canvas = this.shadowRoot.querySelector("canvas");
+    const svg = this.shadowRoot.querySelector("svg");
+    //const canvas2 = document.getElementById("myCanvas");
+    debugger;
+    const ctx = canvas.getContext("2d");
+
+    var s = new XMLSerializer();
+    var str = s.serializeToString(svg);
+    console.log(str);
+    // Read the SVG string using the fromString method
+    // of Canvg
+    // v = Canvg.fromString(
+    //   ctx,
+    //   '<svg height="200" width="300"><polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:navy;stroke-width:5;fill-rule:nonzero;"/></svg>'
+    // );
+
+    v = Canvg.fromString(ctx, str);
+    //v = await Canvg.from(ctx, "./src/download_0.svg");
+
+    // Start drawing the SVG on the canvas
+    v.start();
+
+    // Convert the Canvas to an image
+    // var img = canvas.toDataURL("img/png");
+
+    var link = this.shadowRoot.getElementById("link");
+    link.setAttribute("download", "birdayhood.png");
+    link.setAttribute(
+      "href",
+      canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
+    );
+    //link.click();
+
+    // Write the image on the screen
+    //document.write('<img src="' + img + '"/>');
   }
   get_hash_tags() {
     const h1 = `#${
