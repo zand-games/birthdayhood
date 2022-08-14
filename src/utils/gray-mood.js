@@ -22,7 +22,7 @@ export class GrayMood extends LitElement {
 
   render() {
     return html`
-      <input id="colorslider" min="0" max="100" type="range" value="100" />
+      <input id="colorslider" min="0" max="100" type="range" value="50" />
     `;
   }
 

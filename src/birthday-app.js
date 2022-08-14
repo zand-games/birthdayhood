@@ -13,11 +13,7 @@ import "./birthday-result";
 import { LitElement, html } from "lit";
 import { BaseComponent } from "./baseComponent.js";
 import Store from "./store.js";
-import {
-  calculate_average_Color,
-  calculate_current_age,
-  create_result_svg,
-} from ".//utils/helper";
+import { calculate_result_data } from "./utils/helper";
 export class BirthdayApp extends BaseComponent {
   constructor() {
     super();
@@ -30,8 +26,6 @@ export class BirthdayApp extends BaseComponent {
   }
   render() {
     return html`
-      <birthday-result></birthday-result>
-
       <div class="container mt-5">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-md-8">
@@ -39,7 +33,6 @@ export class BirthdayApp extends BaseComponent {
               <h1 id="register">Birthdayhood</h1>
               <div class="all-steps" id="all-steps">
                 <!-- Steps -->
-
                 <birthday-step icon="fa-user"></birthday-step>
                 <birthday-step icon="fa-solid fa-shapes"></birthday-step>
                 <birthday-step
@@ -72,7 +65,7 @@ export class BirthdayApp extends BaseComponent {
                   >Thanks for your valuable information. It helps us to improve
                   our services!</span
                 > -->
-                <birthday-result></birthday-result>
+                <!-- <birthday-result></birthday-result> -->
               </div>
               <div style="overflow:auto;" id="nextprevious">
                 <div style="float:right;">
@@ -95,21 +88,9 @@ export class BirthdayApp extends BaseComponent {
   }
 
   log() {
+    document.getElementById("text-message").style.display = "block";
     console.clear();
-    console.log("name: " + BirthdayStore.name);
-    console.log("year: " + BirthdayStore.year);
-    console.log("month: " + BirthdayStore.month);
-    console.log("day: " + BirthdayStore.day);
-    console.log("mental: " + BirthdayStore.mentalColor);
-    console.log("body: " + BirthdayStore.bodyColor);
-    console.log("lost: " + BirthdayStore.lost);
-    console.log("lost color: " + BirthdayStore.lostColor);
-    console.log("social: " + BirthdayStore.socialColor);
-    console.log("shape: " + BirthdayStore.shape);
-
-    console.log("Sum All RGB: " + calculate_average_Color());
-    console.log("Age: " + calculate_current_age());
-    console.log("Emoji: " + BirthdayStore.emoji);
+    this.show_result_component();
   }
 
   firstUpdated() {
@@ -128,7 +109,6 @@ export class BirthdayApp extends BaseComponent {
   showTab(n) {
     var x = document.getElementsByClassName("tab");
     if (!x[n]) {
-      this.log();
       return;
     }
     x[n].style.display = "block";
@@ -155,18 +135,18 @@ export class BirthdayApp extends BaseComponent {
       document.getElementById("nextprevious").style.display = "none";
       document.getElementById("all-steps").style.display = "none";
       document.getElementById("register").style.display = "none";
-      document.getElementById("text-message").style.display = "block";
 
-      //create_result_svg();
+      //calculate_result_data();
+      this.show_result_component();
+      document.getElementById("text-message").style.display = "block";
     }
     this.showTab(this.currentTab);
   }
 
   validateForm() {
+    return true;
     document.getElementsByClassName("step")[this.currentTab].className +=
       " finish";
-    return true;
-
     var x,
       y,
       i,
@@ -198,6 +178,14 @@ export class BirthdayApp extends BaseComponent {
     }
 
     x[n].className += " active";
+  }
+
+  show_result_component() {
+    calculate_result_data();
+    console.log(BirthdayStore);
+    var container = document.getElementById("text-message");
+    var result_component = document.createElement("birthday-result");
+    container.replaceChildren(result_component);
   }
 }
 
