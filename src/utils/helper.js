@@ -9,7 +9,9 @@ function get_average(items) {
     g += Number(element.split(";")[1]);
     b += Number(element.split(";")[2]);
   });
-  return `${r / items.length}, ${g / items.length}, ${b / items.length}`;
+  return `${Math.round(r / items.length)}, ${Math.round(
+    g / items.length
+  )}, ${Math.round(b / items.length)}`;
 }
 
 function calculate_current_age() {

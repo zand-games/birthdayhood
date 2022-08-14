@@ -209,6 +209,7 @@ export class InfoTab extends BaseComponent {
   }
   monthChanged(e) {
     BirthdayStore.month = e.target.value;
+    BirthdayStore.monthName = e.target.options[e.target.selectedIndex].text;
   }
   dayChanged(e) {
     BirthdayStore.day = e.target.value;

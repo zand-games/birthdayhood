@@ -12,6 +12,7 @@ export default class Store {
     this.socialColor = "255;250;164;1";
     this.year = 1980;
     this.month = 8;
+    this.monthName = "Aug";
     this.day = 24;
 
     this.lostColor = "150;150;150;1";
