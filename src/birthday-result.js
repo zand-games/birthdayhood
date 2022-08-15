@@ -522,20 +522,47 @@ export class BirthdayResult extends LitElement {
         />
       </div>
       <div>
-        <button @click="${this.export_svg_to_img}" value="export to image">
-          Export to Image
-        </button>
+        
+      <button id= "insta_story" @click="${
+        this.export_svg_to_img
+      }" value="export for instagram story">
+        Export for instagram story
+      </button>
+      <button id= "insta_post" @click="${
+        this.export_svg_to_img
+      }" value="export for instagram post">
+        Export for instagram post
+      </button>
+      <button id= "twitter" @click="${
+        this.export_svg_to_img
+      }" value="export for twitter">
+      export for twitter
+      </button>
+        
       </div>
       <canvas id="myCanvas"></canvas>
       <a display="none" id="link"></a>
     `;
   }
-  async export_svg_to_img() {
+  async export_svg_to_img(e) {
+    let btn_size = e.target.id;
     let v = null;
     const canvas = this.shadowRoot.querySelector("canvas");
     const svg = this.shadowRoot.querySelector("svg");
     //const canvas2 = document.getElementById("myCanvas");
-    debugger;
+    switch (btn_size) {
+      case "insta_story":
+        this.resize_svg("1080", "1920");
+        break;
+
+      case "insta_post":
+        this.resize_svg("1080", "1080");
+        break;
+
+      case "twitter":
+        this.resize_svg("450", "900");
+        break;
+    }
     const ctx = canvas.getContext("2d");
 
     var s = new XMLSerializer();
@@ -567,6 +594,11 @@ export class BirthdayResult extends LitElement {
 
     // Write the image on the screen
     //document.write('<img src="' + img + '"/>');
+  }
+  resize_svg(width, height) {
+    const svg = this.shadowRoot.querySelector("svg");
+    svg.setAttribute("width", width);
+    svg.setAttribute("height", height);
   }
   get_hash_tags() {
     const h1 = `#${
