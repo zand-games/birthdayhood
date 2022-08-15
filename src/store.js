@@ -16,7 +16,7 @@ export default class Store {
     this.day = 24;
 
     this.lostColor = "150;150;150;1";
-    this.lost = false;
+    this.lost = true;
     this.shape = "triangle";
     this.emoji = "happy";
 
