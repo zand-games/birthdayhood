@@ -15,8 +15,10 @@ export class BirthdayResult extends LitElement {
         width="300px"
         height="400px"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns:xlink="http://www.w3.org/1999/xlink"        
       >
+      <rect width="100%" height="100%" fill="white" style="stroke-width: 1px;stroke:black;background-color:white;"/>
+
         <clipPath id="d">
           <path transform="scale(.24)" d="M0 0h754.167v1636.105H0z" />
         </clipPath>
@@ -272,15 +274,15 @@ export class BirthdayResult extends LitElement {
           />
         </g>
         <text
-          style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 9.3px; white-space: pre;"
+          style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 9.3px;"
           x="6.976"
           y="394.767"
         >
           http://zand.games
         </text>
         <text
-          style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14.3px; white-space: pre;"
-          x="38.371"
+          style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14.3px;"
+          x="10.371"
           y="351.161"
         >
           ${BirthdayStore.wish}
@@ -503,9 +505,8 @@ export class BirthdayResult extends LitElement {
         </g>
 
         <text
-          style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16.3px;"
-          x="192.697"
-          y="31.976"
+          style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16.3px;"
+          x="240.697" y="31.976"
         >
           ${BirthdayStore.age}
         </text>
