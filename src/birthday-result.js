@@ -12,8 +12,8 @@ export class BirthdayResult extends LitElement {
     return html`
       <svg
         viewBox="0 0 300 400"
-        width="1024"
-        height="768"
+        width="300px"
+        height="400px"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
       >
@@ -540,43 +540,32 @@ export class BirthdayResult extends LitElement {
       </button>
         
       </div>
-      <canvas id="myCanvas"></canvas>
-      <a display="none" id="link"></a>
+      <canvas style="display:inline;"  id="myCanvas"></canvas>
+      <a  id="link"></a>
     `;
   }
   async export_svg_to_img(e) {
     let btn_size = e.target.id;
-    let v = null;
     const canvas = this.shadowRoot.querySelector("canvas");
+
     const svg = this.shadowRoot.querySelector("svg");
-    //const canvas2 = document.getElementById("myCanvas");
+    let svg_content = "";
     switch (btn_size) {
       case "insta_story":
-        this.resize_svg("1080", "1920");
+        svg_content = this.resize_svg("1080", "1920");
         break;
 
       case "insta_post":
-        this.resize_svg("1080", "1080");
+        svg_content = this.resize_svg("1080", "1080");
         break;
 
       case "twitter":
-        this.resize_svg("450", "900");
+        svg_content = this.resize_svg("450", "900");
         break;
     }
     const ctx = canvas.getContext("2d");
 
-    var s = new XMLSerializer();
-    var str = s.serializeToString(svg);
-    console.log(str);
-    // Read the SVG string using the fromString method
-    // of Canvg
-    // v = Canvg.fromString(
-    //   ctx,
-    //   '<svg height="200" width="300"><polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:navy;stroke-width:5;fill-rule:nonzero;"/></svg>'
-    // );
-
-    v = Canvg.fromString(ctx, str);
-    //v = await Canvg.from(ctx, "./src/download_0.svg");
+    let v = Canvg.fromString(ctx, svg_content);
 
     // Start drawing the SVG on the canvas
     v.start();
@@ -585,26 +574,27 @@ export class BirthdayResult extends LitElement {
     // var img = canvas.toDataURL("img/png");
 
     var link = this.shadowRoot.getElementById("link");
+    link.style.display = "none";
     link.setAttribute("download", "birdayhood.png");
     link.setAttribute(
       "href",
       canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
     );
     //link.click();
-
-    // Write the image on the screen
-    //document.write('<img src="' + img + '"/>');
   }
   resize_svg(width, height) {
     const svg = this.shadowRoot.querySelector("svg");
-    svg.setAttribute("width", width);
-    svg.setAttribute("height", height);
+    var s = new XMLSerializer();
+    var str = s.serializeToString(svg);
+    let result = str.replace("300px", width);
+    result = result.replace("400px", height);
+    return result;
   }
   get_hash_tags() {
     const h1 = `#${
       BirthdayStore.year
     }_${BirthdayStore.monthName.toLowerCase()}_${BirthdayStore.day}`;
-    const h2 = `#${BirthdayStore.age}_${BirthdayStore.shape}_${BirthdayStore.emoji}`;
+    const h2 = `#${BirthdayStore.age}_${BirthdayStore.emoji}_${BirthdayStore.shape}`;
     const h3 = `#${BirthdayStore.avgcolor
       .split(" ")
       .join("")
