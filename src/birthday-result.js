@@ -2,7 +2,6 @@ import { html, css, LitElement } from "lit";
 import { BaseComponent } from "./baseComponent";
 import { BirthdayStore } from "./store";
 import { Canvg } from "https://cdn.skypack.dev/canvg";
-
 export class BirthdayResult extends LitElement {
   constructor() {
     super();
@@ -17,6 +16,11 @@ export class BirthdayResult extends LitElement {
         xmlns:xlink="http://www.w3.org/1999/xlink"        
       >
       <rect width="100%" height="100%" fill="white" style="stroke-width: 1px;stroke:black;"/>
+
+      <rect width="100%" height="100%" fill=rgb(${
+        BirthdayStore.avgcolor
+      }) opacity="0.1"
+      style="stroke-width: 1px;stroke:black;"/>
 
         <clipPath id="d">
           <path transform="scale(.24)" d="M0 0h754.167v1636.105H0z" />
@@ -79,21 +83,22 @@ export class BirthdayResult extends LitElement {
         <g opacity="1" transform="matrix(1, 0, 0, 1, -10.594479, 199.195526)">
           <clipPath id="m">
             <path
-              transform="matrix(.24 0 0 .24 135.12 46.08)"
+              
               d="M0 0h199v173H0z"
               fill-rule="evenodd"
             />
           </clipPath>
           <g clip-path="url(#m)">
             <path
-              transform="matrix(.86188 0 0 .86083 143.957 54.726)"                          
+              transform="matrix(.86188 0 0 .86083 143.957 54.726),translate(10,5)"                          
               stroke-width="20"
               stroke-linecap="round"
               stroke-linejoin="round"
               fill="none"
               stroke="rgb(${BirthdayStore.jobColorResult})"
               d="M18 1.44H1.24s-.52 0-.82.06c0 0-.31.05-.36.47 0 0-.06.41-.06 1.44 0 0 0 1.02.06 2.41 0 0 .05 1.38.47 2.71 0 0 .41 1.33 1.54 2.22 0 0 1.13.88 2.97 1.85 0 0 1.84.97 3.08 1.69 0 0 1.24.72 2.27 1.14 0 0 1.02.41 1.8.72 0 0 .77.3 1.6.36 0 0 .83.05 2.06.05h1.99s.77 0 1.18-.05c0 0 .42-.06.78-.31 0 0 .36-.25.67-.41 0 0 .3-.16.25-.66 0 0-.05-.51-.82-.62 0 0-.78-.11-2.31 0 0 0-1.53.11-2.66.67 0 0-1.14.55-1.8.97 0 0-.67.41-.83.72 0 0-.17.3-.42.41 0 0-.25.11-.46.42 0 0-.22.3-.98.77 0 0-.76.47-.92 1.44 0 0-.16.97-.16 2 0 0 0 1.02.16 1.91 0 0 .16.88 1.08 2 0 0 .92 1.11 2 1.33 0 0 1.08.21 2.11.21H27.31s.66 0 1.18-.05c0 0 .53-.06 1.34-.47 0 0 .81-.41.97-1.49 0 0 .16-1.08.16-2.77 0 0 0-1.7.06-3.28 0 0 .05-1.59.3-2.22 0 0 .25-.63.36-1.45 0 0 .11-.83.42-2.31 0 0 .3-1.48.66-2.3 0 0 .36-.83.66-1.25 0 0 .31-.41.36-.77 0 0 .06-.36.12-.66 0 0 .05-.31.3-.47 0 0 .25-.17.31-.72 0 0 .05-.56.05-1.08 0 0 0-.53-.05-1.34 0 0-.06-.81-.31-1.02 0 0-.25-.22-.36-.47 0 0-.11-.25-.42-.41 0 0-.3-.17-.76-.67 0 0-.47-.5-1.33-.61 0 0-.87-.11-1.34-.11 0 0-.47 0-.77-.05 0 0-.31-.06-.42-.31 0 0-.11-.25-.41-.36 0 0-.31-.11-.67-.36 0 0-.36-.25-.88-.3 0 0-.52-.06-1.8-.06h-4.41s-.58 0-1.13.06c0 0-.56.05-.67.36l-.11.3"
-            />
+              transform="translate(10,10)"
+              />
           </g>
         </g>
         <clipPath id="t">
@@ -130,7 +135,6 @@ export class BirthdayResult extends LitElement {
         </g>
         <clipPath id="l">
           <path
-            transform="matrix(.24 0 0 .24 68.64 22.56)"
             d="M0 0h104v103H0z"
             fill-rule="evenodd"
           />
@@ -147,7 +151,7 @@ export class BirthdayResult extends LitElement {
             fill="none"
             stroke="rgb(${BirthdayStore.mentalColorResult})"
             d="m8.64 0-.21.61s-.22.61-1.28.83c0 0-1.07.22-1.64.78 0 0-.58.55-1.19 1.08 0 0-.61.52-1.08 1.38 0 0-.47.86-1.08 1.39 0 0-.61.52-.97 1.13 0 0-.36.61-.42 1.19 0 0-.05.57-.1 1.8 0 0-.06 1.22-.31 2.47 0 0-.25 1.24-.3 2.88 0 0-.06 1.63.05 3.07 0 0 .11 1.44.88 2.47 0 0 .77 1.03 2.52 1.61 0 0 1.75.57 4.05 1.49 0 0 2.3.91 4.16 1.74 0 0 1.85.83 3.24 1.7 0 0 1.39.86 2.22 1.08 0 0 .82.21 1.44.52 0 0 .61.3.83.61 0 0 .21.3.77.41 0 0 .55.11 1.18.36 0 0 .63.25 2.06.31 0 0 1.42.05 2.3.05h1.55s.66 0 1.13-.05c0 0 .47-.06 1.08-.52 0 0 .61-.47.97-1.58 0 0 .36-1.12.42-1.75 0 0 .05-.63.05-1.55v-2.99s0-.63-.16-2.16c0 0-.16-1.53-1.4-3.02 0 0-1.25-1.5-3.73-2.78 0 0-2.48-1.28-3.27-1.85 0 0-.8-.58-1.16-1.19 0 0-.36-.61-.66-1.02 0 0-.31-.42-.36-.84 0 0-.06-.41-.16-.96 0 0-.11-.56-.61-.72 0 0-.51-.17-.72-.53 0 0-.22-.36-.72-1.08 0 0-.51-.72-.62-1.63 0 0-.11-.92-.16-1.39 0 0-.06-.47-.31-.83 0 0-.25-.36-.3-.72 0 0-.06-.36-.06-.72V.72"
-            transform="matrix(.48267 0 0 .48358 73.583 27.43)"
+            transform="matrix(.48267 0 0 .48358 73.583 27.43),translate(-40,20)"
           />
         </g>
 
@@ -284,7 +288,9 @@ export class BirthdayResult extends LitElement {
         ></rect>
 
         <path
-          visibility="${BirthdayStore.shape == "penta" ? "visible" : "hidden"}"
+          visibility="${
+            BirthdayStore.shape == "pentagon" ? "visible" : "hidden"
+          }"
           style="fill: rgb(${
             BirthdayStore.avgcolor
           }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
@@ -300,9 +306,12 @@ export class BirthdayResult extends LitElement {
           d="m54.37499,191.89865l28.40001,-134.5913l113.60001,0l-28.40001,134.5913l-113.60001,0z"
           transform="translate(21,45)"
         />
+      
 
         <path
-          visibility="${BirthdayStore.shape == "hegxa" ? "visible" : "hidden"}"
+          visibility="${
+            BirthdayStore.shape == "hexagon" ? "visible" : "hidden"
+          }"
           style="fill: rgb(${
             BirthdayStore.avgcolor
           }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
@@ -465,19 +474,30 @@ export class BirthdayResult extends LitElement {
 
 
         <image x="15" y="160" width="52" height="52" href="../../assets/body.svg" />
-        <image x="85" y="55" width="52" height="52" href="../../assets/mental.svg" />
-        <image x="135" y="250" width="52" height="52" href="../../assets/job.svg" />
+        <image x="52" y="75" width="52" height="52" href="../../assets/mental.svg" />
+        <image x="140" y="250" width="52" height="52" href="../../assets/job.svg" />
         <image x="220" y="85" width="52" height="52" href="../../assets/social.svg" />
         <image x="233" visibility="${
           BirthdayStore.lost == true ? "visible" : "hidden"
         }" y="190" width="38" height="38" href="../../assets/rip.svg" />
 
         <text
-          style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16.3px;"
+          style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16.3px;font-weight: bold;"
           x="240.697" y="31.976"
         >
           ${BirthdayStore.age}
         </text>
+        <text
+        style="fill: rgb(${
+          BirthdayStore.avgcolor
+        }); font-family: Arial, sans-serif; font-size: 22px;stroke: #000000;
+        stroke-width: 1px;
+        font-weight: 700;"
+        x="10" y="36"
+      >
+        BirthdayHood
+      </text>
+
       </svg>
       <div class="wrapper">
         <h3>Your hashtags</h3>
@@ -516,7 +536,6 @@ export class BirthdayResult extends LitElement {
   async export_svg_to_img(e) {
     let btn_size = e.target.id;
     const canvas = this.shadowRoot.querySelector("canvas");
-
     const svg = this.shadowRoot.querySelector("svg");
     let svg_content = "";
     switch (btn_size) {
@@ -560,8 +579,9 @@ export class BirthdayResult extends LitElement {
     return result;
   }
   get_hash_tags() {
-    const h4 = "#birthdayhood #zand_games";
-    return `${this.get_hash_birthday()} ${this.get_feeling_hashtag()} ${this.get_color_hashtag()} ${h4}`;
+    const h1 = "#birthday";
+    const h5 = "#birthdayhood #zand_games";
+    return `${h1} ${this.get_hash_birthday()} ${this.get_feeling_hashtag()} ${this.get_color_hashtag()} ${h5}`;
   }
 
   get_hash_birthday() {
@@ -579,6 +599,7 @@ export class BirthdayResult extends LitElement {
   get_feeling_hashtag() {
     return `#${BirthdayStore.age}_${BirthdayStore.emoji}_${BirthdayStore.shape}`;
   }
+
   static get styles() {
     return css`
       .wrapper {

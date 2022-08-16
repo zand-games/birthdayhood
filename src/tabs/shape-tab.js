@@ -5,7 +5,15 @@ export class ShapeTab extends BaseComponent {
   constructor() {
     super();
   }
-
+  Shapes = Object.freeze({
+    Circle: "circle",
+    Triangle: "triangle",
+    Diamond: "diamond",
+    Pentagon: "pentagon",
+    Trapez: "trapez",
+    Hexagon: "hexagon",
+    Star: "star",
+  });
   firstUpdated() {
     super.firstUpdated();
     var svgs = document.querySelectorAll('svg[name="shape"]');
@@ -46,7 +54,7 @@ export class ShapeTab extends BaseComponent {
           width="85"
           height="85"
           viewBox="0 0 250 250"
-          id="circle"
+          id="${this.Shapes.Circle}"
           name="shape"
         >
           <circle r="120" cx="125" cy="125" />
@@ -56,7 +64,7 @@ export class ShapeTab extends BaseComponent {
           width="85"
           height="85"
           viewBox="0 0 250 250"
-          id="triangle"
+          id="${this.Shapes.Triangle}"
           name="shape"
         >
           <path
@@ -69,7 +77,7 @@ export class ShapeTab extends BaseComponent {
           width="85"
           height="85"
           viewBox="0 0 250 250"
-          id="diamond"
+          id="${this.Shapes.Diamond}"
           name="shape"
         >
           <rect
@@ -85,7 +93,7 @@ export class ShapeTab extends BaseComponent {
           width="85"
           height="85"
           viewBox="0 0 250 250"
-          id="penta"
+          id="${this.Shapes.Pentagon}"
           name="shape"
         >
           <path
@@ -97,7 +105,7 @@ export class ShapeTab extends BaseComponent {
           width="85"
           height="85"
           viewBox="0 0 250 250"
-          id="trapez"
+          id="${this.Shapes.Trapez}"
           name="shape"
         >
           <path
@@ -110,7 +118,7 @@ export class ShapeTab extends BaseComponent {
           height="85"
           viewBox="0 0 250 250"
           name="shape"
-          id="hegxa"
+          id="${this.Shapes.Hexagon}"
         >
           <path
             d="M 125.037 11.495 L 227.711 69.727 L 227.711 186.192 L 125.037 244.425 L 22.363 186.193 L 22.363 69.727 Z"
@@ -123,7 +131,7 @@ export class ShapeTab extends BaseComponent {
           width="85"
           height="85"
           viewBox="0 0 250 250"
-          id="star"
+          id="${this.Shapes.Star}"
           name="shape"
         >
           <path
