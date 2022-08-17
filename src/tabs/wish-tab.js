@@ -17,14 +17,25 @@ export class WishTab extends BaseComponent {
         <form>
           <div class="form-row">
             <div class="form-group col-md-12">
-              <input
+              <!-- <input
                 placeholder="Your wish for the next year..."
                 type="text"
                 class="form-control"
                 id="txtwish"
                 maxlength="34"
                 @change="${this.wishChanged}"
-              />
+              /> -->
+
+              <div class="input-box">
+                <input
+                  value=""
+                  autofocus="autofocus"
+                  id="txtwish"
+                  maxlength="34"
+                  @change="${this.wishChanged}"
+                />
+                <span class="unit">I wish, </span>
+              </div>
             </div>
           </div>
         </form>

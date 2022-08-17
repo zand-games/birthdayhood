@@ -22,7 +22,7 @@ input {
   padding: 10px;
   width: 100%;
   font-size: 17px;
-  font-family: Raleway;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   border: 1px solid #aaaaaa;
   border-radius: 10px;
   -webkit-appearance: none;
@@ -157,4 +157,28 @@ button:focus {
 .emoji {
   fill: transparent;
   fill: rgb(98 92 92 / 77%);
+}
+
+.input-box { 
+  position: relative; 
+}
+
+input { 
+  display: block; 
+  border: 1px solid #d7d6d6; 
+  background: #fff; 
+  padding: 10px 10px 10px 55px; 
+  /* width: 195px;  */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+}
+
+.unit { 
+  position: absolute; 
+  display: block; 
+  left: 5px; 
+  top: 10px; 
+  z-index: 9; 
+  color: #656563;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+
 }

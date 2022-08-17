@@ -191,29 +191,29 @@ export class BirthdayResult extends LitElement {
         </clipPath>
             
         <text
-          style="fill: rgb(51, 51, 51); font-family:Tahoma, Arial, sans-serif; font-size: 13px;background:red"
+          style="fill: #656563; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 13px;background:red"
           
-          y="308"
-          x="180"  dominant-baseline="middle" text-anchor="middle"
+          y="307"
+          x="177"  dominant-baseline="middle" text-anchor="middle"
         >
           ${BirthdayStore.wish}
         </text>
         <text
-          style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 9.3px;"
+          style="fill: rgb(51, 51, 51); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 9.3px;"
           x="215.371"
           y="394.767"
         >
           http://zand.games
         </text>
         <text
-          style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 8px"
+          style="fill: rgb(51, 51, 51); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 8px"
           x="7"
           y="373"
         >
         ${this.get_hash_birthday()}
         </text>
         <text
-          style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 8px"
+          style="fill: rgb(51, 51, 51); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 8px"
           x="7"
           y="385"
         >
@@ -221,7 +221,7 @@ export class BirthdayResult extends LitElement {
 
         </text>
         <text
-          style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 8px;"
+          style="fill: rgb(51, 51, 51); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 8px;"
           x="7"
           y="396"
         >
