@@ -15,14 +15,14 @@ export class BirthdayResult extends LitElement {
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"        
       >
-      <rect width="100%" height="100%" fill="white" style="stroke-width: 1px;stroke:black;"/>
+      <rect rx="15" width="100%" height="100%" fill="white" style="stroke-width: 1px;stroke:##656563;"/>
 
-      <rect width="100%" height="100%" fill=rgb(${
+      <rect rx="15" width="100%" height="100%" fill=rgb(${
         BirthdayStore.avgcolor
-      }) opacity="0.1"
-      style="stroke-width: 1px;stroke:black;"/>
+      }) opacity="0.2"
+      style="stroke-width: 1px;stroke:#656563;"/>
       
-    <g id="header">
+    <g id="header" transform="translate(10,0)">
         <image  x="0" y="5" height="56" width="200" href="../../assets/birthdayhood.png" />
     </g>
     <g id="age_candle" transform="translate(0,10)">
@@ -422,6 +422,9 @@ export class BirthdayResult extends LitElement {
         <image visibility="${
           BirthdayStore.lost == true ? "visible" : "hidden"
         }" x="130" y="250" width="62" height="32" href="../../assets/titles/lost.png" />
+         <image visibility="${
+           BirthdayStore.lost == false ? "visible" : "hidden"
+         }" x="130" y="230" width="72" height="51" href="../../assets/titles/nolost.png" />
       </g>
   </g>
         

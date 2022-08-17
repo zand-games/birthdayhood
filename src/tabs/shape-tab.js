@@ -100,7 +100,7 @@ export class ShapeTab extends BaseComponent {
             d="m9.87002,97.1347l116.49985,-88.99785l116.50013,88.99785l-44.49889,144.00216l-144.00207,0l-44.49902,-144.00216z"
           />
         </svg>
-        <svg
+        <!-- <svg
           xmlns="http://www.w3.org/2000/svg"
           width="85"
           height="85"
@@ -111,7 +111,7 @@ export class ShapeTab extends BaseComponent {
           <path
             d="m11.37499,234.30733l46.00001,-217.99998l184.00001,0l-46.00001,217.99998l-184.00001,0z"
           />
-        </svg>
+        </svg> -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="85"

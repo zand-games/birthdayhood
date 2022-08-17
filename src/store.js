@@ -16,13 +16,13 @@ export default class Store {
     this.day = 24;
 
     this.lostColor = "150;150;150;1";
-    this.lost = true;
+    this.lost = false;
     this.shape = "triangle";
     this.emoji = "happy";
 
     this.age = 0;
     this.hashtag = "37_blue_diamond";
-    this.wish = "I wish a year full of health and love";
+    this.wish = "a year full of health, love and fun";
 
     this.avgcolor = "255,255,255";
     this.mentalColorResult = "33,40,92";
