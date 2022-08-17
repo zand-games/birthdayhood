@@ -467,30 +467,24 @@ export class BirthdayResult extends LitElement {
         </g>
 
 
-        <image x="15" y="160" width="52" height="52" href="../../assets/body.svg" />
-        <image x="52" y="75" width="52" height="52" href="../../assets/mental.svg" />
-        <image x="140" y="250" width="52" height="52" href="../../assets/job.svg" />
-        <image x="220" y="85" width="52" height="52" href="../../assets/social.svg" />
-        <image x="233" visibility="${
+        <!-- <image x="15" y="160" width="38" height="38" href="../../assets/body.png" />
+        <image x="52" y="75" width="32" height="32" href="../../assets/mental.png" />
+        <image x="140" y="250" width="32" height="32" href="../../assets/job.png" />
+        <image x="220" y="85" width="32" height="32" href="../../assets/social.png" /> -->
+        <!-- <image visibility="${
           BirthdayStore.lost == true ? "visible" : "hidden"
-        }" y="190" width="38" height="38" href="../../assets/rip.svg" />
-        <image x="220" y="4" width="42" height="42" href="../../assets/Numbers/${
+        }" x="237" y="195" width="32" height="32" href="../../assets/rip.svg" /> -->
+        <image x="220" y="14" width="42" height="42" href="../../assets/Numbers/${
           String(BirthdayStore.age)[0]
-        }.svg" />
-        <image x="248" y="4" width="42" height="42" visibility="${
+        }.png" />
+        <image x="248" y="14" width="42" height="42" visibility="${
           BirthdayStore.age > 10 ? "visible" : "hidden"
         }"
-        href="../../assets/Numbers/${String(BirthdayStore.age)[1]}.svg" />
-        <text
-        style="fill: rgb(${
-          BirthdayStore.avgcolor
-        }); font-family: Arial, sans-serif; font-size: 22px;stroke: #000000;
-        stroke-width: 1px;
-        font-weight: 700;"
-        x="10" y="36"
-      >
-        BirthdayHood
-      </text>
+        href="../../assets/Numbers/${String(BirthdayStore.age)[1]}.png" />
+        
+        <image  x="0" y="5" height="56" width="200" href="../../assets/birthdayhood.png" />
+        
+      
 
       </svg>
       <div class="wrapper">
