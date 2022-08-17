@@ -192,9 +192,9 @@ export class BirthdayResult extends LitElement {
             
         <text
           style="fill: #656563; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 13px;background:red"
-          
-          y="307"
-          x="177"  dominant-baseline="middle" text-anchor="middle"
+          text-anchor="start"
+          y="310"
+          x="76" 
         >
           ${BirthdayStore.wish}
         </text>
