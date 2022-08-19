@@ -591,9 +591,10 @@ export class BirthdayResult extends LitElement {
     return css`
       .wrapper {
         color: white;
-        padding: 20px 28px;
+        padding-right: 3%;
+        padding-left: 3%;
         margin: 0;
-        width: 100%;
+        width: 94%;
         background-color: rgb(91 93 96);
         border-radius: 30px;
         display: flex;
