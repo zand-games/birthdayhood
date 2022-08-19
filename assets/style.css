@@ -1,12 +1,11 @@
+
 body {
   background: #eee;
 }
 
 #regForm {
-  background-color: #ffffff;
-  margin: 0px auto;
-  font-family: Raleway;
-  padding: 40px;
+  background-color: #ffffff;  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
   border-radius: 10px;
 }
 
@@ -71,6 +70,7 @@ button:focus {
   width: 100%;
   display: inline-flex;
   justify-content: center;
+  
 }
 
 .step {
@@ -113,13 +113,7 @@ button:focus {
 .shape {
   margin: 10rm;
 }
-/* .shapescontainer{
-    display: inline-block;
-    height: 85px;
-    width: 85px;
-    background-color: transparent;
-    margin: 3px;;
-} */
+
 
 /* Screen larger than 600px? 2 column */
 @media (min-width: 600px) {
@@ -181,4 +175,33 @@ input {
   color: #656563;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 
+}
+
+
+.aboutcontainer{
+  margin-top: 1.7em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+
+}
+.aboutcontainer .title{
+  color: #797979;
+  text-align: center;
+  font-size: 2em;
+
+}
+.aboutcontainer .body{
+  color: #797979;
+  text-align: left;
+}
+/* .container{
+  position: relative;
+  min-height: 100vh;
+   padding-bottom: 2.5em;     
+} */
+
+.footer-content{
+color: black ;
+background-color: #ededed;
+padding: 10px;
+border-radius: 10px;
 }

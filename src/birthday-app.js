@@ -8,6 +8,7 @@ import "./tabs/social-tab";
 import "./tabs/body-tab";
 import "./tabs/mental-tab";
 import "./tabs/wish-tab";
+import "./app-footer";
 import "./birthday-result";
 import { LitElement, html } from "lit";
 import { BaseComponent } from "./baseComponent.js";
@@ -21,11 +22,17 @@ export class BirthdayApp extends BaseComponent {
   static get properties() {
     return {
       currentTab: { type: Number },
+      min_horizontal_move: { type: Number },
+      max_vertical_move: { type: Number },
+      within_ms: { type: Number },
+      start_xPos: { type: Number },
+      start_yPos: { type: Number },
+      start_time: { type: Number },
     };
   }
   render() {
     return html`
-      <div class="container mt-5">
+      <div id="container" class="container mt-5">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-md-8">
             <form id="regForm">
@@ -74,6 +81,7 @@ export class BirthdayApp extends BaseComponent {
             </form>
           </div>
         </div>
+        <!-- <app-footer></app-footer> -->
       </div>
     `;
   }
@@ -87,9 +95,56 @@ export class BirthdayApp extends BaseComponent {
   firstUpdated() {
     super.firstUpdated();
     this.currentTab = 0;
-    window.addEventListener("DOMContentLoaded", (e) =>
-      this.showTab(this.currentTab)
-    );
+
+    window.addEventListener("DOMContentLoaded", (e) => {
+      this.showTab(this.currentTab);
+
+      var content = document.getElementById("container");
+      content.addEventListener("touchstart", this.touch_start);
+      // content.addEventListener("touchend", (event) => {
+      //   this.min_horizontal_move = 30;
+      //   this.max_vertical_move = 30;
+      //   this.within_ms = 1000;
+      //   this.touch_end(event);
+      // });
+
+      content.addEventListener("touchend", this.touch_end);
+    });
+  }
+
+  touch_start(event) {
+    this.min_horizontal_move = 30;
+    this.max_vertical_move = 30;
+    this.within_ms = 1000;
+
+    this.start_xPos = event.touches[0].pageX;
+    this.start_yPos = event.touches[0].pageY;
+    this.start_time = new Date();
+  }
+
+  touch_end(event) {
+    var end_xPos = event.changedTouches[0].pageX;
+    var end_yPos = event.changedTouches[0].pageY;
+    var end_time = new Date();
+    let move_x = end_xPos - this.start_xPos;
+    let move_y = end_yPos - this.start_yPos;
+    let elapsed_time = end_time - this.start_time;
+
+    if (
+      Math.abs(move_x) > this.min_horizontal_move &&
+      Math.abs(move_y) < this.max_vertical_move &&
+      elapsed_time < this.within_ms
+    ) {
+      if (move_x < 0) {
+        //alert("left");
+        // document.getElementById("nextBtn").click();
+        // console.log("left");
+      } else {
+        //alert("right");
+        // document.getElementById("prevBtn").click();
+        //console.log("right");
+      }
+    }
   }
   next(e) {
     this.nextPrev(1);

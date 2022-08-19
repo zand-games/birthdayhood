@@ -198,6 +198,29 @@ export class InfoTab extends BaseComponent {
           <g />
           <g />
         </svg>
+
+        <div class="aboutcontainer">
+          <div class="title">About</div>
+          <div>
+            <p class="body">
+              Birthdayhood is an experimental application to make a report for
+              our last year with color and shape and connect with others based
+              on the some hashtags.
+            </p>
+            <p class="body">
+              We are not saving any data and when you generate your birthday
+              report the data will be disposed.
+            </p>
+            <p>
+              <span class="footer-content">
+                © 2022
+                <a class="footerlink" target="_blank" href="https://zand.games"
+                  >Zand.Games</a
+                >, All rights reserved
+              </span>
+            </p>
+          </div>
+        </div>
       </div>
     `;
   }
