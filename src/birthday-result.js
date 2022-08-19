@@ -9,6 +9,7 @@ export class BirthdayResult extends LitElement {
   render() {
     return html`
       <svg
+        class="svg_result"
         viewBox="0 0 675 1200"
         width="100%"
         height="100%"
@@ -556,11 +557,13 @@ export class BirthdayResult extends LitElement {
   }
   resize_svg(width, height) {
     const svg = this.shadowRoot.querySelector("svg");
+    var cloned_svg = svg.cloneNode(true);
+    cloned_svg.setAttribute("width", width);
+    cloned_svg.setAttribute("height", height);
     var s = new XMLSerializer();
-    var str = s.serializeToString(svg);
-    let result = str.replace("675px", width);
-    result = result.replace("1200px", height);
-    return result;
+    var str = s.serializeToString(cloned_svg);
+
+    return str;
   }
   get_hash_tags() {
     const h1 = "#birthday";
@@ -625,6 +628,11 @@ export class BirthdayResult extends LitElement {
         font-size: 16px;
         outline: none;
       }
+      @media only screen and (min-width: 600px) and (orientation : landscape) {
+        svg {
+          width: 55%;
+        }
+        
     `;
   }
 }
