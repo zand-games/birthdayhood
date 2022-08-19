@@ -41,14 +41,13 @@ input.invalid {
 }
 
 button {
-  background-color: #6a1b9a;
+  background-color: rgb(35, 175, 180);
   color: #ffffff;
   border: none;
-  border-radius: 50%;
   padding: 10px 20px;
   font-size: 17px;
   font-family: Raleway;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 button:hover {
@@ -61,8 +60,12 @@ button:focus {
 
 #prevBtn {
   /* background-color: #bbbbbb; */  
+  border-radius: 20px 20px !important;
+ 
 }
-
+#nextBtn{
+  border-radius: 20px 20px !important;
+}
 .all-steps {
   text-align: center;
   margin-top: 30px;
@@ -203,5 +206,11 @@ input {
 color: black ;
 background-color: #ededed;
 padding: 10px;
-border-radius: 10px;
+margin-top: 30px;
+border-radius: 15px 50px;
+border-right: 2px solid hwb(278 36% 15%);
+border-left: 8px solid hwb(278 36% 15%);
+border-bottom: 2px solid hwb(280 53% 26%);
+
 }
+

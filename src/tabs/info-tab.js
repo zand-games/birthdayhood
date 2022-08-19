@@ -211,13 +211,11 @@ export class InfoTab extends BaseComponent {
               We are not saving any data and when you generate your birthday
               report the data will be disposed.
             </p>
-            <p>
-              <span class="footer-content">
-                © 2022
-                <a class="footerlink" target="_blank" href="https://zand.games"
-                  >Zand.Games</a
-                >, All rights reserved
-              </span>
+            <p class="footer-content">
+              © 2022
+              <a class="footerlink" target="_blank" href="https://zand.games"
+                >Zand.Games</a
+              >, All rights reserved
             </p>
           </div>
         </div>
