@@ -9,9 +9,9 @@ export class BirthdayResult extends LitElement {
   render() {
     return html`
       <svg
-        viewBox="0 0 300 400"
-        width="300px"
-        height="400px"
+        viewBox="0 0 675 1200"
+        width="100%"
+        height="100%"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"        
       >
@@ -22,10 +22,10 @@ export class BirthdayResult extends LitElement {
       }) opacity="0.2"
       style="stroke-width: 1px;stroke:#656563;"/>
       
-    <g id="header" transform="translate(10,0)">
+    <g id="header" transform="translate(15,20),scale(2.3)">
         <image  x="0" y="5" height="56" width="200" href="../../assets/birthdayhood.png" />
     </g>
-    <g id="age_candle" transform="translate(0,10)">
+    <g id="age_candle" transform="translate(0,30),scale(2.3)">
     <image x="220" y="14" width="42" height="42" href="../../assets/Numbers/${
       String(BirthdayStore.age)[0]
     }.png" />
@@ -35,7 +35,7 @@ export class BirthdayResult extends LitElement {
     href="../../assets/Numbers/${String(BirthdayStore.age)[1]}.png" />
     </g>
 
-  <g id="body" transform="translate(0,20)">
+  <g id="body" transform="translate(0,100),scale(2.3)">
       <clipPath id="d">
           <path transform="scale(.24)" d="M0 0h754.167v1636.105H0z" />
         </clipPath>
@@ -424,11 +424,11 @@ export class BirthdayResult extends LitElement {
         }" x="130" y="250" width="62" height="32" href="../../assets/titles/lost.png" />
          <image visibility="${
            BirthdayStore.lost == false ? "visible" : "hidden"
-         }" x="130" y="230" width="72" height="51" href="../../assets/titles/nolost.png" />
+         }" x="130" y="255" width="72" height="51" href="../../assets/titles/nolost.png" />
       </g>
   </g>
         
-    <g id="wish_group" transform="translate(0,15)">    
+    <g id="wish_group" transform="translate(10,180),scale(2.3)">    
 
         <text
           style="fill: #656563; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 13px;background:red"
@@ -440,9 +440,9 @@ export class BirthdayResult extends LitElement {
         </text>
         <image  x="3" y="295" height="19" width="70" href="../../assets/titles/iwish.png" />
       </g> 
-    <g id="footer" >
+    <g id="footer" transform="scale(2.4)" >
 
-    <g id="footer_zand" >
+    <g id="footer_zand" transform="translate(-20,95)">
     <text
     style="fill: #656563; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 9.3px;"
     x="215.371"
@@ -452,7 +452,7 @@ export class BirthdayResult extends LitElement {
   </text>
 
         </g>
-        <g id="footer_hashtag" transform="translate(5,-10)">
+        <g id="footer_hashtag" transform="translate(10,80)">
   <text
     style="fill: #656563; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 10px"
     x="7"
@@ -558,8 +558,8 @@ export class BirthdayResult extends LitElement {
     const svg = this.shadowRoot.querySelector("svg");
     var s = new XMLSerializer();
     var str = s.serializeToString(svg);
-    let result = str.replace("300px", width);
-    result = result.replace("400px", height);
+    let result = str.replace("675px", width);
+    result = result.replace("1200px", height);
     return result;
   }
   get_hash_tags() {
