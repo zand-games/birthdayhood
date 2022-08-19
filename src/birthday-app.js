@@ -46,32 +46,14 @@ export class BirthdayApp extends BaseComponent {
                   icon="fa-regular fa-comment-dots"
                 ></birthday-step>
               </div>
-              <!-- Tabs -->
-              <info-tab></info-tab>
-              <shape-tab></shape-tab>
-              <body-tab></body-tab>
-              <mental-tab></mental-tab>
-              <social-tab></social-tab>
-              <job-tab></job-tab>
-              <wish-tab></wish-tab>
-              <div class="thanks-message text-center" id="text-message">
-                <!-- <img
-                  src="https://i.imgur.com/O18mJ1K.png"
-                  width="100"
-                  class="mb-4"
-                />
-                <h3>Thankyou for your feedback!</h3>
-                <span
-                  >Thanks for your valuable information. It helps us to improve
-                  our services!</span
-                > -->
-                <!-- <birthday-result></birthday-result> -->
-              </div>
-              <div style="overflow:auto;" id="nextprevious">
-                <div style="float:right;">
+              <!-- Navigation  -->
+              <div style="overflow:auto;margin-bottom:10px" id="nextprevious">
+                <div style="float:left;">
                   <button type="button" id="prevBtn" @click="${this.prev}">
                     <i class="fa fa-angle-double-left"></i>
                   </button>
+                </div>
+                <div style="float:right;">
                   <button type="button" id="nextBtn" @click="${this.next}">
                     <i class="fa fa-angle-double-right"></i>
                   </button>
@@ -80,6 +62,15 @@ export class BirthdayApp extends BaseComponent {
                   </button>
                 </div>
               </div>
+              <!-- Tabs -->
+              <info-tab></info-tab>
+              <shape-tab></shape-tab>
+              <body-tab></body-tab>
+              <mental-tab></mental-tab>
+              <social-tab></social-tab>
+              <job-tab></job-tab>
+              <wish-tab></wish-tab>
+              <div class="thanks-message text-center" id="text-message"></div>
             </form>
           </div>
         </div>
