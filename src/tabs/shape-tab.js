@@ -48,7 +48,7 @@ export class ShapeTab extends BaseComponent {
   render() {
     return html`
       <div class="tab item-center">
-        <h5>What was last year like?</h5>
+        <h5>What is your shape today?</h5>
         <br />
         <svg
           xmlns="http://www.w3.org/2000/svg"

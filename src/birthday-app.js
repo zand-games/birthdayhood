@@ -36,22 +36,13 @@ export class BirthdayApp extends BaseComponent {
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-md-8">
             <form id="regForm">
-              <h1 id="register">Birthdayhood</h1>
+              <h1 id="register">Color Mood</h1>
               <div class="all-steps" id="all-steps">
                 <!-- Steps -->
-                <birthday-step icon="fa-user"></birthday-step>
+                <birthday-step icon="fa-brain"></birthday-step>
+                <birthday-step icon="fa-solid fa-heart"></birthday-step>
                 <birthday-step icon="fa-solid fa-shapes"></birthday-step>
-                <birthday-step
-                  icon="fa-solid fa-child-reaching"
-                ></birthday-step>
-                <birthday-step icon="fa-solid fa-brain"></birthday-step>
                 <birthday-step icon="fa-solid fa-people-group"></birthday-step>
-                <birthday-step
-                  icon="fa-solid fa-person-digging"
-                ></birthday-step>
-                <birthday-step
-                  icon="fa-regular fa-comment-dots"
-                ></birthday-step>
               </div>
               <!-- Navigation  -->
               <div style="overflow:auto;margin-bottom:20px" id="nextprevious">
@@ -64,19 +55,16 @@ export class BirthdayApp extends BaseComponent {
                   <button type="button" id="nextBtn" @click="${this.next}">
                     <i class="fa fa-angle-double-right"></i>
                   </button>
-                  <!-- <button type="button" id="btnlog" @click="${this.log}">
+                  <button type="button" id="btnlog" @click="${this.log}">
                     <i class="fa fa-info"></i>
-                  </button> -->
+                  </button>
                 </div>
               </div>
               <!-- Tabs -->
               <info-tab></info-tab>
+              <mental-tab></mental-tab>
               <shape-tab></shape-tab>
               <body-tab></body-tab>
-              <mental-tab></mental-tab>
-              <social-tab></social-tab>
-              <job-tab></job-tab>
-              <wish-tab></wish-tab>
               <div class="thanks-message text-center" id="text-message"></div>
             </form>
           </div>

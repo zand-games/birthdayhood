@@ -532,47 +532,6 @@ export class BirthdayResult extends LitElement {
 
         <!-- </g> -->
       </svg>
-      <div class="wrapper">
-        <h3>Your hashtags</h3>
-        <!-- <p class="info">Type your hashtag & click enter.</p> -->
-        <input
-          type="text"
-          id="hashtags"
-          autocomplete="off"
-          onClick="this.select();"
-          value="${this.get_hash_tags()}"
-        />
-      </div>
-      <div class="btncontainer">
-        <button
-          class="button instagram"
-          id="insta_story"
-          @click="${this.export_svg_to_img}"
-          value="export for instagram story"
-        >
-          Download for instagram story
-        </button>
-        <button
-          id="insta_post"
-          @click="${this.export_svg_to_img}"
-          class="button instagram"
-          value="export for instagram post"
-        >
-          Download for instagram post
-        </button>
-        <button
-          id="twitter"
-          class="button twitter"
-          @click="${this.export_svg_to_img}"
-          value="Export for twitter"
-        >
-          Download for twitter
-        </button>
-      </div>
-      <canvas style="display:inline;" id="myCanvas"></canvas>
-      <div style="text-align:center;">
-        <a id="link"></a>
-      </div>
     `;
   }
   async export_svg_to_img(e) {

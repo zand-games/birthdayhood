@@ -13,7 +13,7 @@ export class MentalTab extends BaseComponent {
   render() {
     return html`
       <div class="tab item-center">
-        <h5>How was your mental situation last year?</h5>
+        <h5>How are you feeling?</h5>
         <p>
           <color-mood
             default="rgb(${BirthdayStore.mentalColor})"

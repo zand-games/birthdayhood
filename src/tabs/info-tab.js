@@ -39,53 +39,7 @@ export class InfoTab extends BaseComponent {
   render() {
     return html`
       <div class="tab">
-        <h5>Your birthday</h5>
-        <form>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <input
-                placeholder="Year"
-                type="number"
-                class="form-control"
-                id="year"
-                @change="${this.yearChanged}"
-              />
-            </div>
-            <div class="form-group col-md-4">
-              <select
-                id="inputState"
-                class="form-control"
-                @change="${this.monthChanged}"
-              >
-                <option value="0" selected>Month...</option>
-                <option value="1">Jan</option>
-                <option value="2">Feb</option>
-                <option value="3">Mar</option>
-                <option value="4">Apr</option>
-                <option value="5">May</option>
-                <option value="6">Jun</option>
-                <option value="7">Jul</option>
-                <option value="8">Aug</option>
-                <option value="9">Sep</option>
-                <option value="10">Oct</option>
-                <option value="11">Nov</option>
-                <option value="12">Dec</option>
-              </select>
-            </div>
-            <div class="form-group col-md-2">
-              <input
-                placeholder="Day"
-                type="number"
-                class="form-control"
-                id="day"
-                @change="${this.dayChanged}"
-              />
-            </div>
-          </div>
-        </form>
-        <br />
-        <br />
-        <h5>Your face today</h5>
+        <h5>Your mood today?</h5>
         <svg
           version="1.1"
           id="happy"
@@ -201,40 +155,6 @@ export class InfoTab extends BaseComponent {
           <g />
           <g />
         </svg>
-
-        <div class="aboutcontainer">
-          <div class="title">
-            <h3>Today is your birthday?</h3>
-          </div>
-          <div>
-            <p class="body">
-              Go to each step and
-              <span style="font-weight:bold"
-                >express your feeling with colors
-              </span>
-              and shapes. At the end you get a birthday card with
-              <span style="font-weight:bold">average color</span>.
-            </p>
-            <p class="body">
-              Some hashtags are generated based on your colors and info. Share
-              your birthday card with those hashtags. There may be other
-              <span style="font-weight:bold"
-                >people in the neighborhood of your feeling.</span
-              >
-            </p>
-
-            <p style="color:#797979">
-              There is no database and We are not saving any data! When you
-              close the browser the data will be removed.
-            </p>
-            <p class="footer-content">
-              © 2022
-              <a class="footerlink" target="_blank" href="https://zand.games"
-                >Zand.Games</a
-              >, All rights reserved
-            </p>
-          </div>
-        </div>
       </div>
     `;
   }
