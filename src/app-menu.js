@@ -4,10 +4,31 @@ import { LitElement, html, css } from "lit";
 import { BaseComponent } from "./baseComponent.js";
 import { StoreSubscriber } from "lit-svelte-stores";
 import "./birthday-app";
+import "./person-simple";
 export class AppMenu extends BaseComponent {
   _store = new StoreSubscriber(this, () => appStore);
+  store2 = new StoreSubscriber(this, () => {
+    this.update_shoede();
+  });
+
+  update_shoede() {
+    return;
+    var container = document.getElementById("container_app");
+    // alert(123);
+    if (this._store.value.menu == "complete") {
+      var birthday_app = document.createElement("birthday-app");
+      if (container) container.replaceChildren(birthday_app);
+    } else {
+      var simple = document.createElement("person-simple");
+      if (container) container.replaceChildren(simple);
+    }
+  }
   constructor() {
     super();
+  }
+
+  static get template() {
+    return alert(this._store.val.menu);
   }
   menuClicked(e) {
     appStore.update((val) => {
@@ -34,7 +55,12 @@ export class AppMenu extends BaseComponent {
         <div class="collapse navbar-collapse" id="navbarColor02">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#" data-abc="true"
+              <a
+                class="nav-link"
+                id="simple"
+                href="#"
+                data-abc="true"
+                @click="${this.menuClicked}"
                 >Simple <span class="sr-only">(current)</span></a
               >
             </li>
@@ -55,33 +81,31 @@ export class AppMenu extends BaseComponent {
               <a class="nav-link" href="#" data-abc="true">Report</a>
             </li>
           </ul>
-          <form
-            onsubmit="event.preventDefault()"
-            class="form-inline my-2 my-lg-0"
-          >
-            <input
-              class="form-control mr-sm-2"
-              type="text"
-              placeholder="Search"
-            />
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </nav>
       <div>
+        <div id="${this._store.value.menu}"></div>
+        <div id="container_app"></div>
         <birthday-app
           style="display:${this._store.value.menu == "complete"
             ? "inline"
             : "none"}"
         ></birthday-app>
+
+        <person-simple
+          style="display:${this._store.value.menu == "simple"
+            ? "inline"
+            : "none"}"
+        ></person-simple>
       </div>
     `;
   }
 
   static get styles() {
     return css``;
+  }
+  firstUpdated() {
+    super.firstUpdated();
   }
 }
 

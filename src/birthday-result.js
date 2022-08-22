@@ -20,7 +20,6 @@ export class BirthdayResult extends LitElement {
         height="100%"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
-        
       >
         <rect
           rx="15"
@@ -39,13 +38,13 @@ export class BirthdayResult extends LitElement {
           style="stroke-width: 1px;stroke:#656563;"
         />
         <image
-        x="90"
-        y="-15"
-        width="200px"
-        height="138px"
-        href="./assets/gamescom-logo.png"
-      />
-        <g id="body" transform="translate(50,30)" >
+          x="90"
+          y="-15"
+          width="200px"
+          height="138px"
+          href="./assets/gamescom-logo.png"
+        />
+        <g id="body" transform="translate(50,30)">
           <g
             opacity="1"
             transform="matrix(1.875744, 0, 0, 1.473143, -18.150595, -9.20886)"
@@ -60,44 +59,44 @@ export class BirthdayResult extends LitElement {
             </clipPath>
           </g>
           <g id="physical" transform="translate(210,-90)">
-          <g
-            opacity="1"
-            clip-path="url(#t)"
-            transform="matrix(2.090916, 0, 0, 2.164994, -10.459481, 10.58442)"
-            style=""
-          >
-            <g clip-path="url(#u)">
+            <g
+              opacity="1"
+              clip-path="url(#t)"
+              transform="matrix(2.090916, 0, 0, 2.164994, -10.459481, 10.58442)"
+              style=""
+            >
+              <g clip-path="url(#u)">
+                <path
+                  stroke-width="20"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                  stroke="rgb(${BirthdayStore.bodyColor})"
+                  d="m8.64 0-.21.61s-.22.61-1.28.83c0 0-1.07.22-1.64.78 0 0-.58.55-1.19 1.08 0 0-.61.52-1.08 1.38 0 0-.47.86-1.08 1.39 0 0-.61.52-.97 1.13 0 0-.36.61-.42 1.19 0 0-.05.57-.1 1.8 0 0-.06 1.22-.31 2.47 0 0-.25 1.24-.3 2.88 0 0-.06 1.63.05 3.07 0 0 .11 1.44.88 2.47 0 0 .77 1.03 2.52 1.61 0 0 1.75.57 4.05 1.49 0 0 2.3.91 4.16 1.74 0 0 1.85.83 3.24 1.7 0 0 1.39.86 2.22 1.08 0 0 .82.21 1.44.52 0 0 .61.3.83.61 0 0 .21.3.77.41 0 0 .55.11 1.18.36 0 0 .63.25 2.06.31 0 0 1.42.05 2.3.05h1.55s.66 0 1.13-.05c0 0 .47-.06 1.08-.52 0 0 .61-.47.97-1.58 0 0 .36-1.12.42-1.75 0 0 .05-.63.05-1.55v-2.99s0-.63-.16-2.16c0 0-.16-1.53-1.4-3.02 0 0-1.25-1.5-3.73-2.78 0 0-2.48-1.28-3.27-1.85 0 0-.8-.58-1.16-1.19 0 0-.36-.61-.66-1.02 0 0-.31-.42-.36-.84 0 0-.06-.41-.16-.96 0 0-.11-.56-.61-.72 0 0-.51-.17-.72-.53 0 0-.22-.36-.72-1.08 0 0-.51-.72-.62-1.63 0 0-.11-.92-.16-1.39 0 0-.06-.47-.31-.83 0 0-.25-.36-.3-.72 0 0-.06-.36-.06-.72V.72"
+                  transform="matrix(.48267 0 0 .48358 16.428 71.948),translate(0,20)"
+                />
+              </g>
+            </g>
+          </g>
+          <g id="mental">
+            <clipPath id="l">
+              <path d="M0 0h104v103H0z" fill-rule="evenodd" />
+            </clipPath>
+            <g
+              clip-path="url(#l)"
+              transform="matrix(1.779226, 0, 0, 1.776662, -43.652012, 9.47801)"
+              style=""
+            >
               <path
                 stroke-width="20"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 fill="none"
-                stroke="rgb(${BirthdayStore.bodyColor})"
+                stroke="rgb(${BirthdayStore.mentalColor})"
                 d="m8.64 0-.21.61s-.22.61-1.28.83c0 0-1.07.22-1.64.78 0 0-.58.55-1.19 1.08 0 0-.61.52-1.08 1.38 0 0-.47.86-1.08 1.39 0 0-.61.52-.97 1.13 0 0-.36.61-.42 1.19 0 0-.05.57-.1 1.8 0 0-.06 1.22-.31 2.47 0 0-.25 1.24-.3 2.88 0 0-.06 1.63.05 3.07 0 0 .11 1.44.88 2.47 0 0 .77 1.03 2.52 1.61 0 0 1.75.57 4.05 1.49 0 0 2.3.91 4.16 1.74 0 0 1.85.83 3.24 1.7 0 0 1.39.86 2.22 1.08 0 0 .82.21 1.44.52 0 0 .61.3.83.61 0 0 .21.3.77.41 0 0 .55.11 1.18.36 0 0 .63.25 2.06.31 0 0 1.42.05 2.3.05h1.55s.66 0 1.13-.05c0 0 .47-.06 1.08-.52 0 0 .61-.47.97-1.58 0 0 .36-1.12.42-1.75 0 0 .05-.63.05-1.55v-2.99s0-.63-.16-2.16c0 0-.16-1.53-1.4-3.02 0 0-1.25-1.5-3.73-2.78 0 0-2.48-1.28-3.27-1.85 0 0-.8-.58-1.16-1.19 0 0-.36-.61-.66-1.02 0 0-.31-.42-.36-.84 0 0-.06-.41-.16-.96 0 0-.11-.56-.61-.72 0 0-.51-.17-.72-.53 0 0-.22-.36-.72-1.08 0 0-.51-.72-.62-1.63 0 0-.11-.92-.16-1.39 0 0-.06-.47-.31-.83 0 0-.25-.36-.3-.72 0 0-.06-.36-.06-.72V.72"
-                transform="matrix(.48267 0 0 .48358 16.428 71.948),translate(0,20)"
+                transform="matrix(.48267 0 0 .48358 73.583 27.43),translate(-50,50)"
               />
             </g>
-            </g>
-          </g>
-          <g id="mental">
-          <clipPath id="l">
-            <path d="M0 0h104v103H0z" fill-rule="evenodd" />
-          </clipPath>
-          <g
-            clip-path="url(#l)"
-            transform="matrix(1.779226, 0, 0, 1.776662, -43.652012, 9.47801)"
-            style=""
-          >
-            <path
-              stroke-width="20"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              fill="none"
-              stroke="rgb(${BirthdayStore.mentalColor})"
-              d="m8.64 0-.21.61s-.22.61-1.28.83c0 0-1.07.22-1.64.78 0 0-.58.55-1.19 1.08 0 0-.61.52-1.08 1.38 0 0-.47.86-1.08 1.39 0 0-.61.52-.97 1.13 0 0-.36.61-.42 1.19 0 0-.05.57-.1 1.8 0 0-.06 1.22-.31 2.47 0 0-.25 1.24-.3 2.88 0 0-.06 1.63.05 3.07 0 0 .11 1.44.88 2.47 0 0 .77 1.03 2.52 1.61 0 0 1.75.57 4.05 1.49 0 0 2.3.91 4.16 1.74 0 0 1.85.83 3.24 1.7 0 0 1.39.86 2.22 1.08 0 0 .82.21 1.44.52 0 0 .61.3.83.61 0 0 .21.3.77.41 0 0 .55.11 1.18.36 0 0 .63.25 2.06.31 0 0 1.42.05 2.3.05h1.55s.66 0 1.13-.05c0 0 .47-.06 1.08-.52 0 0 .61-.47.97-1.58 0 0 .36-1.12.42-1.75 0 0 .05-.63.05-1.55v-2.99s0-.63-.16-2.16c0 0-.16-1.53-1.4-3.02 0 0-1.25-1.5-3.73-2.78 0 0-2.48-1.28-3.27-1.85 0 0-.8-.58-1.16-1.19 0 0-.36-.61-.66-1.02 0 0-.31-.42-.36-.84 0 0-.06-.41-.16-.96 0 0-.11-.56-.61-.72 0 0-.51-.17-.72-.53 0 0-.22-.36-.72-1.08 0 0-.51-.72-.62-1.63 0 0-.11-.92-.16-1.39 0 0-.06-.47-.31-.83 0 0-.25-.36-.3-.72 0 0-.06-.36-.06-.72V.72"
-              transform="matrix(.48267 0 0 .48358 73.583 27.43),translate(-50,50)"
-            />
-          </g>
           </g>
           <circle
             r="65"
@@ -105,82 +104,68 @@ export class BirthdayResult extends LitElement {
             cy="169.445"
             rx="54.36"
             ry="50.841"
-            visibility="${
-              BirthdayStore.shape == "circle" ? "visible" : "hidden"
-            }"
-            style="fill: rgb(${
-              BirthdayStore.avgcolor
-            }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+            visibility="${BirthdayStore.shape == "circle"
+              ? "visible"
+              : "hidden"}"
+            style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
           />
           <path
-            visibility="${
-              BirthdayStore.shape == "triangle" ? "visible" : "hidden"
-            }"
+            visibility="${BirthdayStore.shape == "triangle"
+              ? "visible"
+              : "hidden"}"
             d="m54.725,191.58533l71.49999,-153.97521l71.49999,153.97521l-142.99998,0l0.00001,0z"
-            style="fill: rgb(${
-              BirthdayStore.avgcolor
-            }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+            style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
             transform="translate(23,30)"
           />
 
           <rect
-            visibility="${
-              BirthdayStore.shape == "diamond" ? "visible" : "hidden"
-            }"
+            visibility="${BirthdayStore.shape == "diamond"
+              ? "visible"
+              : "hidden"}"
             x="122"
             y="83"
             width="115"
             height="115"
-            style="fill: rgb(${
-              BirthdayStore.avgcolor
-            }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+            style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
             transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, 120.899485, -58.757852)"
           ></rect>
 
           <path
-            visibility="${
-              BirthdayStore.shape == "pentagon" ? "visible" : "hidden"
-            }"
-            style="fill: rgb(${
-              BirthdayStore.avgcolor
-            }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+            visibility="${BirthdayStore.shape == "pentagon"
+              ? "visible"
+              : "hidden"}"
+            style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
             d="m57.23623,107.52932l65.96469,-50.39247l65.96485,50.39247l-25.19622,81.53708l-81.53703,0l-25.19629,-81.53708z"
             transform="translate(25,37)"
           />
 
           <path
-            visibility="${
-              BirthdayStore.shape == "trapez" ? "visible" : "hidden"
-            }"
-            style="fill: rgb(${
-              BirthdayStore.avgcolor
-            }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+            visibility="${BirthdayStore.shape == "trapez"
+              ? "visible"
+              : "hidden"}"
+            style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
             d="m3.37499,116.99431l24.20001,-114.68696l96.80001,0l-24.20001,114.68696l-96.80001,0z"
             transform="translate(82,110)"
           />
 
           <path
-            visibility="${
-              BirthdayStore.shape == "hexagon" ? "visible" : "hidden"
-            }"
-            style="fill: rgb(${
-              BirthdayStore.avgcolor
-            }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+            visibility="${BirthdayStore.shape == "hexagon"
+              ? "visible"
+              : "hidden"}"
+            style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
             d="m52.65999,125.1127l30.85714,-61.71428l82.28571,0l30.85713,61.71428l-30.85713,61.71428l-82.28571,0l-30.85714,-61.71428z"
             transform="translate(24,45)"
           />
           <path
             visibility="${BirthdayStore.shape == "star" ? "visible" : "hidden"}"
-            style="fill: rgb(${
-              BirthdayStore.avgcolor
-            }); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
+            style="fill: rgb(${BirthdayStore.avgcolor}); stroke: rgb(0, 0, 0); stroke-opacity: 0.5;"
             d="M 87.3 11.495 L 114.988 59.871 L 167.299 72.61 L 132.099 115.247 L 136.742 171.495 L 87.3 149.471 L 37.858 171.495 L 42.501 115.247 L 7.301 72.61 L 59.612 59.871 Z"
             transform="translate(62,70)"
           />
           <g
-            visibility="${
-              BirthdayStore.emoji == "happy" ? "visible" : "hidden"
-            }"
+            visibility="${BirthdayStore.emoji == "happy"
+              ? "visible"
+              : "hidden"}"
             stroke="null"
             id="Layer_1"
             transform="matrix(1, 0, 0, 1, 127.418594, 147.348846)"
@@ -299,9 +284,9 @@ export class BirthdayResult extends LitElement {
             </g>
           </g>
           <g
-            visibility="${
-              BirthdayStore.emoji == "quite" ? "visible" : "hidden"
-            }"
+            visibility="${BirthdayStore.emoji == "quite"
+              ? "visible"
+              : "hidden"}"
             stroke="null"
             id="Layer_1"
             transform="matrix(1, 0, 0, 1, 127.418594, 147.348846)"
@@ -326,7 +311,6 @@ export class BirthdayResult extends LitElement {
             </g>
           </g>
           <g id="body_png_group">
-
             <image
               x="215"
               y="95"
@@ -345,7 +329,7 @@ export class BirthdayResult extends LitElement {
           </g>
         </g>
 
-        <g id="footer" >
+        <g id="footer">
           <g id="footer_zand" transform="translate(95,-100)">
             <text
               style="fill: #656563; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 9.3px;"
@@ -363,24 +347,20 @@ export class BirthdayResult extends LitElement {
             >
               ${this.get_color_hashtag()}
             </text>
-            
-            </text>
           </g>
         </g>
-            
+
         <!-- </g> -->
       </svg>
-      <button id= "download" @click="${
-        this.export_svg_to_img
-      }" value="Download">
-      Download
+      <button id="download" @click="${this.export_svg_to_img}" value="Download">
+        Download
       </button>
-      <canvas style="display:inline;"  id="myCanvas"></canvas>
-      
-      <a  id="link"></a>
+      <canvas style="display:inline;" id="myCanvas"></canvas>
+
+      <a id="link"></a>
     `;
   }
-  start_canvas_result() {
+  async start_canvas_result() {
     const canvas = this.shadowRoot.querySelector("canvas");
     const svgc = this.shadowRoot.querySelector("svg");
     const ctx = canvas.getContext("2d");
@@ -389,6 +369,8 @@ export class BirthdayResult extends LitElement {
     let v = Canvg.fromString(ctx, svg_content);
 
     v.start();
+    // await new Promise((r) => setTimeout(r, 300));
+    svgc.style.display = "none";
   }
   async export_svg_to_img(e) {
     let btn_size = e.target.id;
