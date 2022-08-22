@@ -16,6 +16,7 @@ export class BodyTab extends BaseComponent {
         <h5>How was your body last year?</h5>
         <p>
           <color-mood
+            default="rgb(${BirthdayStore.bodyColor})"
             class="ColorPicker"
             @color_changed="${this.update_color}"
           ></color-mood>

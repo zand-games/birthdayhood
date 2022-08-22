@@ -38,13 +38,7 @@ export class GrayMood extends LitElement {
     );
 
     this.dispatchInput(
-      colorPicked[0] +
-        ";" +
-        colorPicked[1] +
-        ";" +
-        colorPicked[2] +
-        ";" +
-        colorPicked[3]
+      colorPicked[0] + "," + colorPicked[1] + "," + colorPicked[2]
     );
     let resultRgba = `rgba(${colorPicked[0]},${colorPicked[1]},${colorPicked[2]},${colorPicked[3]})`;
     return resultRgba;

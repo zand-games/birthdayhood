@@ -21,6 +21,7 @@ export class SocialTab extends BaseComponent {
         <p>
           <color-mood
             class="ColorPicker"
+            default="rgb(${BirthdayStore.socialColor})"
             @color_changed="${this.update_color}"
           ></color-mood>
         </p>

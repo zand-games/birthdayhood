@@ -5,9 +5,9 @@ function get_average(items) {
     g = 0,
     b = 0;
   items.forEach((element) => {
-    r += Number(element.split(";")[0]);
-    g += Number(element.split(";")[1]);
-    b += Number(element.split(";")[2]);
+    r += Number(element.split(",")[0]);
+    g += Number(element.split(",")[1]);
+    b += Number(element.split(",")[2]);
   });
   return `${Math.round(r / items.length)}, ${Math.round(
     g / items.length
@@ -48,20 +48,20 @@ export function calculate_result_data() {
       : get_average([...list_of_colors, BirthdayStore.lostColor]);
 
   BirthdayStore.avgcolor = _avg_color;
-
-  BirthdayStore.bodyColorResult = get_comma_format_color(
-    BirthdayStore.bodyColor
-  );
-  BirthdayStore.socialColorResult = get_comma_format_color(
-    BirthdayStore.socialColor
-  );
-  BirthdayStore.lostColorResult = get_comma_format_color(
-    BirthdayStore.lostColor
-  );
-  BirthdayStore.jobColorResult = get_comma_format_color(BirthdayStore.jobColor);
-  BirthdayStore.mentalColorResult = get_comma_format_color(
-    BirthdayStore.mentalColor
-  );
+  // debugger;
+  // BirthdayStore.bodyColorResult = get_comma_format_color(
+  //   BirthdayStore.bodyColor
+  // );
+  // BirthdayStore.socialColorResult = get_comma_format_color(
+  //   BirthdayStore.socialColor
+  // );
+  // BirthdayStore.lostColorResult = get_comma_format_color(
+  //   BirthdayStore.lostColor
+  // );
+  // BirthdayStore.jobColorResult = get_comma_format_color(BirthdayStore.jobColor);
+  // BirthdayStore.mentalColorResult = get_comma_format_color(
+  //   BirthdayStore.mentalColor
+  // );
 
   BirthdayStore.age = calculate_current_age();
 }
