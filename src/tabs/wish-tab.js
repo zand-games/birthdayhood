@@ -13,19 +13,10 @@ export class WishTab extends BaseComponent {
   render() {
     return html`
       <div class="tab">
-        <!-- <h6>Your Wish</h6> -->
+        <h5>Your wish for new age!</h5>
         <form>
           <div class="form-row">
             <div class="form-group col-md-12">
-              <!-- <input
-                placeholder="Your wish for the next year..."
-                type="text"
-                class="form-control"
-                id="txtwish"
-                maxlength="34"
-                @change="${this.wishChanged}"
-              /> -->
-
               <div class="input-box">
                 <input
                   value=""

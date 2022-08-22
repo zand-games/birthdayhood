@@ -54,7 +54,7 @@ export class BirthdayApp extends BaseComponent {
                 ></birthday-step>
               </div>
               <!-- Navigation  -->
-              <div style="overflow:auto;margin-bottom:10px" id="nextprevious">
+              <div style="overflow:auto;margin-bottom:20px" id="nextprevious">
                 <div style="float:left;">
                   <button type="button" id="prevBtn" @click="${this.prev}">
                     <i class="fa fa-angle-double-left"></i>

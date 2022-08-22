@@ -12,10 +12,13 @@ export class MentalTab extends BaseComponent {
 
   render() {
     return html`
-      <div class="tab">
-        <h6>How was your mental and emotional state last year?</h6>
+      <div class="tab item-center">
+        <h5>How was your mental situation last year?</h5>
         <p>
-          <color-mood @color_changed="${this.update_color}"></color-mood>
+          <color-mood
+            class="ColorPicker"
+            @color_changed="${this.update_color}"
+          ></color-mood>
         </p>
       </div>
     `;

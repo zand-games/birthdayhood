@@ -39,7 +39,7 @@ export class InfoTab extends BaseComponent {
   render() {
     return html`
       <div class="tab">
-        <h6>Your birthday</h6>
+        <h5>Your birthday</h5>
         <form>
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -83,6 +83,9 @@ export class InfoTab extends BaseComponent {
             </div>
           </div>
         </form>
+        <br />
+        <br />
+        <h5>Your face today</h5>
         <svg
           version="1.1"
           id="happy"
@@ -200,16 +203,26 @@ export class InfoTab extends BaseComponent {
         </svg>
 
         <div class="aboutcontainer">
-          <div class="title">About</div>
+          <div class="title">
+            <h3>Today is your birthday?</h3>
+          </div>
           <div>
             <p class="body">
-              Birthdayhood is an experimental application to make a report for
-              our last year with color and shape and connect with others based
-              on the some hashtags.
+              Go to each step and express your feeling with colors and shapes.
+              At the end you get a birthday card with average color.
             </p>
             <p class="body">
-              We are not saving any data and when you generate your birthday
-              report the data will be disposed.
+              Some hashtags are generated based on your colors. Share your
+              birthday card with those hashtags.
+              <span style="font-weight:bold">
+                There may be other people in the neighborhood of your color or
+                shape.</span
+              >
+            </p>
+
+            <p style="color:#797979">
+              There is no database and We are not saving any data! When you
+              close the browser the data will be removed.
             </p>
             <p class="footer-content">
               © 2022

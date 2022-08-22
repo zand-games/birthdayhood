@@ -18,21 +18,24 @@ export class lostTab extends BaseComponent {
 
   render() {
     return html`
-      <div class="">
-        <h6>Someone from connections has died?</h6>
-        <input
-          id="lost_status"
-          type="checkbox"
-          data-toggle="switchbutton"
-          checked
-          data-onlabel="No"
-          data-offlabel="Yes"
-          data-onstyle="success"
-          data-offstyle="danger"
-          @change=${this.changed}
-        />
+      <div>
+        <h5 style="text-align: left">
+          Someone from your connections has died?
+          <input
+            id="lost_status"
+            type="checkbox"
+            data-toggle="switchbutton"
+            checked
+            data-onlabel="No"
+            data-offlabel="Yes"
+            @change=${this.changed}
+          />
+        </h5>
+
         <div ?hidden="${!this.visiblity}">
-          <h6>How much was it painful?</h6>
+          <br />
+
+          <h5>How much was it painful?</h5>
           <p>
             <gray-mood @color_changed="${this.update_color}"></gray-mood>
           </p>

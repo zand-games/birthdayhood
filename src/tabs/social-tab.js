@@ -13,15 +13,17 @@ export class SocialTab extends BaseComponent {
 
   render() {
     return html`
-      <div class="tab">
-        <h6>
-          How were your social relationships in general? (family, friends,
-          community, colleagues)
-        </h6>
-        <p>
-          <color-mood @color_changed="${this.update_color}"></color-mood>
-        </p>
+      <div class="tab item-center">
         <lost-tab></lost-tab>
+        <br />
+        <h5>How was your social relations last year?</h5>
+        <h6>(family, friends, community, colleagues)</h6>
+        <p>
+          <color-mood
+            class="ColorPicker"
+            @color_changed="${this.update_color}"
+          ></color-mood>
+        </p>
       </div>
     `;
   }

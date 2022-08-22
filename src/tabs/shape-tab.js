@@ -47,8 +47,9 @@ export class ShapeTab extends BaseComponent {
 
   render() {
     return html`
-      <div class="tab">
-        <h6>Select a shape for your last year</h6>
+      <div class="tab item-center">
+        <h5>What was last year like?</h5>
+        <br />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="85"

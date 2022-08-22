@@ -12,14 +12,14 @@ export class BodyTab extends BaseComponent {
 
   render() {
     return html`
-      <div class="tab">
-        <h6>
-          How was last year in terms of you body? (Exercise, Nutrition, etc.)
-        </h6>
+      <div class="tab item-center">
+        <h5>How was your body last year?</h5>
         <p>
-          <!-- <input placeholder="Name..." oninput="this.className = ''" name="fname"> -->
+          <color-mood
+            class="ColorPicker"
+            @color_changed="${this.update_color}"
+          ></color-mood>
         </p>
-        <color-mood @color_changed="${this.update_color}"></color-mood>
       </div>
     `;
   }

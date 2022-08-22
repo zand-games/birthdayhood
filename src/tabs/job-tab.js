@@ -12,10 +12,13 @@ export class JobTab extends BaseComponent {
   }
   render() {
     return html`
-      <div class="tab">
-        <h6>How was your job?</h6>
+      <div class="tab item-center">
+        <h5>How was your job?</h5>
         <p>
-          <color-mood @color_changed="${this.update_color}"></color-mood>
+          <color-mood
+            class="ColorPicker"
+            @color_changed="${this.update_color}"
+          ></color-mood>
         </p>
       </div>
     `;
