@@ -216,7 +216,6 @@ export class BirthdayApp extends BaseComponent {
 
   show_result_component() {
     calculate_result_data();
-    console.log(BirthdayStore);
     var container = document.getElementById("text-message");
     var result_component = document.createElement("birthday-result");
     container.replaceChildren(result_component);

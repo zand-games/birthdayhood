@@ -626,7 +626,10 @@ export class BirthdayResult extends LitElement {
     const h2 = `#${new Date().getFullYear()}_${BirthdayStore.monthName.toLowerCase()}_${
       BirthdayStore.day
     }`;
-    return `${h1} ${this.get_hash_birthday()} ${this.get_feeling_hashtag()} ${this.get_color_hashtag()} ${h2} ${h5}`;
+
+    const h3 = `#${BirthdayStore.day}_${BirthdayStore.monthName.toLowerCase()}`;
+
+    return `${h1} ${this.get_hash_birthday()} ${this.get_feeling_hashtag()} ${this.get_color_hashtag()}  ${h3} ${h2} ${h5}`;
   }
 
   get_hash_birthday() {
