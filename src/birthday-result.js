@@ -39,7 +39,7 @@ export class BirthdayResult extends LitElement {
             y="5"
             height="56"
             width="200"
-            href="../../assets/birthdayhood.png"
+            href="./assets/birthdayhood.png"
           />
         </g>
         <g id="age_candle" transform="translate(0,30),scale(2.3)">
@@ -48,7 +48,7 @@ export class BirthdayResult extends LitElement {
             y="14"
             width="42"
             height="42"
-            href="../../assets/Numbers/${String(BirthdayStore.age)[0]}.png"
+            href="./assets/${String(BirthdayStore.age)[0]}.png"
           />
           <image
             x="248"
@@ -56,7 +56,7 @@ export class BirthdayResult extends LitElement {
             width="42"
             height="42"
             visibility="${BirthdayStore.age > 10 ? "visible" : "hidden"}"
-            href="../../assets/Numbers/${String(BirthdayStore.age)[1]}.png"
+            href="./assets/${String(BirthdayStore.age)[1]}.png"
           />
         </g>
 
@@ -436,28 +436,28 @@ export class BirthdayResult extends LitElement {
               y="183"
               width="68"
               height="35"
-              href="../../assets/titles/physical.png"
+              href="./assets/titles/physical.png"
             />
             <image
               x="35"
               y="95"
               width="58"
               height="35"
-              href="../../assets/titles/mental.png"
+              href="./assets/titles/mental.png"
             />
             <image
               x="225"
               y="195"
               width="68"
               height="38"
-              href="../../assets/titles/work.png"
+              href="./assets/titles/work.png"
             />
             <image
               x="206"
               y="85"
               width="62"
               height="32"
-              href="../../assets/titles/social.png"
+              href="./assets/titles/social.png"
             />
             <image
               visibility="${BirthdayStore.lost == true ? "visible" : "hidden"}"
@@ -465,7 +465,7 @@ export class BirthdayResult extends LitElement {
               y="250"
               width="62"
               height="32"
-              href="../../assets/titles/lost.png"
+              href="./assets/titles/lost.png"
             />
             <image
               visibility="${BirthdayStore.lost == false ? "visible" : "hidden"}"
@@ -473,7 +473,7 @@ export class BirthdayResult extends LitElement {
               y="255"
               width="72"
               height="51"
-              href="../../assets/titles/nolost.png"
+              href="./assets/titles/nolost.png"
             />
           </g>
         </g>
@@ -492,7 +492,7 @@ export class BirthdayResult extends LitElement {
             y="295"
             height="19"
             width="70"
-            href="../../assets/titles/iwish.png"
+            href="./assets/titles/iwish.png"
           />
         </g>
         <g id="footer" transform="scale(2.4)">

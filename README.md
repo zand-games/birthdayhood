@@ -1,31 +1,11 @@
-<p align="center">
-  <img width="200" src="https://open-wc.org/hero.png"></img>
-</p>
+# Birthdayhood
 
-## Open-wc Starter App
+## Express your feeling with colors and shapes. At the end you get a birthday card with average color.
 
-[![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
+## Some hashtags are generated based on your colors and info. Share your birthday card with those hashtags. There may be other people in the neighborhood of your feeling.
 
-## Quickstart
+### There is no database and We are not saving any data! When you close the browser the data will be removed.
 
-To get started:
+Playe from here: https://zand-games.github.io/birthdayhood/
 
-```bash
-npm init @open-wc
-# requires node 10 & npm 6 or higher
-```
-
-## Scripts
-
-- `start` runs your app for development, reloading on file changes
-- `start:build` runs your app after it has been built using the build command
-- `build` builds your app and outputs it in your `dist` directory
-- `test` runs your test suite with Web Test Runner
-- `lint` runs the linter for your project
-- `format` fixes linting and formatting errors
-
-## Tooling configs
-
-For most of the tools, the configuration is in the `package.json` to reduce the amount of files in your project.
-
-If you customize the configuration a lot, you can consider moving them to individual files.
+To read more about the games visit Zand.Games: https://www.zand.games
