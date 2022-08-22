@@ -64,9 +64,9 @@ export class BirthdayApp extends BaseComponent {
                   <button type="button" id="nextBtn" @click="${this.next}">
                     <i class="fa fa-angle-double-right"></i>
                   </button>
-                  <button type="button" id="btnlog" @click="${this.log}">
+                  <!-- <button type="button" id="btnlog" @click="${this.log}">
                     <i class="fa fa-info"></i>
-                  </button>
+                  </button> -->
                 </div>
               </div>
               <!-- Tabs -->
@@ -81,7 +81,6 @@ export class BirthdayApp extends BaseComponent {
             </form>
           </div>
         </div>
-        <!-- <app-footer></app-footer> -->
       </div>
     `;
   }
@@ -98,17 +97,6 @@ export class BirthdayApp extends BaseComponent {
 
     window.addEventListener("DOMContentLoaded", (e) => {
       this.showTab(this.currentTab);
-
-      var content = document.getElementById("container");
-      content.addEventListener("touchstart", this.touch_start);
-      // content.addEventListener("touchend", (event) => {
-      //   this.min_horizontal_move = 30;
-      //   this.max_vertical_move = 30;
-      //   this.within_ms = 1000;
-      //   this.touch_end(event);
-      // });
-
-      content.addEventListener("touchend", this.touch_end);
     });
   }
 

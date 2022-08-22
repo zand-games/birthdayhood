@@ -570,7 +570,9 @@ export class BirthdayResult extends LitElement {
         </button>
       </div>
       <canvas style="display:inline;" id="myCanvas"></canvas>
-      <a id="link"></a>
+      <div style="text-align:center;">
+        <a id="link"></a>
+      </div>
     `;
   }
   async export_svg_to_img(e) {
@@ -595,11 +597,8 @@ export class BirthdayResult extends LitElement {
 
     let v = Canvg.fromString(ctx, svg_content);
 
-    // Start drawing the SVG on the canvas
     v.start();
-
-    // Convert the Canvas to an image
-    // var img = canvas.toDataURL("img/png");
+    await new Promise((r) => setTimeout(r, 2000));
 
     var link = this.shadowRoot.getElementById("link");
     link.style.display = "none";
@@ -608,7 +607,8 @@ export class BirthdayResult extends LitElement {
       "href",
       canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
     );
-    //link.click();
+    link.click();
+    v.stop();
   }
   resize_svg(width, height) {
     const svg = this.shadowRoot.querySelector("svg");

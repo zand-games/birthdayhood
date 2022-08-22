@@ -208,15 +208,18 @@ export class InfoTab extends BaseComponent {
           </div>
           <div>
             <p class="body">
-              Go to each step and express your feeling with colors and shapes.
-              At the end you get a birthday card with average color.
+              Go to each step and
+              <span style="font-weight:bold"
+                >express your feeling with colors
+              </span>
+              and shapes. At the end you get a birthday card with
+              <span style="font-weight:bold">average color</span>.
             </p>
             <p class="body">
-              Some hashtags are generated based on your colors. Share your
-              birthday card with those hashtags.
-              <span style="font-weight:bold">
-                There may be other people in the neighborhood of your color or
-                shape.</span
+              Some hashtags are generated based on your colors and info. Share
+              your birthday card with those hashtags. There may be other
+              <span style="font-weight:bold"
+                >people in the neighborhood of your feeling.</span
               >
             </p>
 
