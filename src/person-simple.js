@@ -69,7 +69,11 @@ export class PersonSimple extends BaseComponent {
       );
     }
 
-    var item = { id: this.contact, color: this.color };
+    var item = {
+      contact: this.contact,
+      color: this.color,
+      time: new Date().toLocaleString(),
+    };
 
     // Put the object into storage
     localStorage.setItem(this.uuidv4(), JSON.stringify(item));
