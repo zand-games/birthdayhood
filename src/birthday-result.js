@@ -10,7 +10,7 @@ export class BirthdayResult extends LitElement {
     return html`
       <svg
         class="svg_result"
-        viewBox="0 0 675 1200"
+        viewBox="0 0 675 1100"
         width="100%"
         height="100%"
         xmlns="http://www.w3.org/2000/svg"
@@ -496,7 +496,7 @@ export class BirthdayResult extends LitElement {
           /> -->
         </g>
         <g id="footer" transform="scale(2.4)">
-          <g id="footer_zand" transform="translate(-20,95)">
+          <g id="footer_zand" transform="translate(-23,55)">
             <text
               style="fill: #656563; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 9.3px;"
               x="215.371"
@@ -505,7 +505,7 @@ export class BirthdayResult extends LitElement {
               http://zand.games
             </text>
           </g>
-          <g id="footer_hashtag" transform="translate(10,80)">
+          <g id="footer_hashtag" transform="translate(10,50)">
             <text
               style="fill: #656563; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 10px"
               x="7"
