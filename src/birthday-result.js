@@ -480,20 +480,20 @@ export class BirthdayResult extends LitElement {
 
         <g id="wish_group" transform="translate(10,180),scale(2.3)">
           <text
-            style="fill: #656563; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 13px;background:red"
+            style="fill: #656563; font-family: 'Hachi Maru Pop', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 10px;background:red"
             text-anchor="start"
             y="310"
-            x="76"
+            x="3"
           >
-            ${BirthdayStore.wish}
+            I wish, ${BirthdayStore.wish}
           </text>
-          <image
+          <!-- <image
             x="3"
             y="295"
             height="19"
             width="70"
             href="./assets/titles/iwish.png"
-          />
+          /> -->
         </g>
         <g id="footer" transform="scale(2.4)">
           <g id="footer_zand" transform="translate(-20,95)">

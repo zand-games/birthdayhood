@@ -2,7 +2,19 @@
 body {
   background: #eee;
 }
-
+/* hachi-maru-pop-regular - latin */
+@font-face {
+  font-family: 'Hachi Maru Pop';
+  font-style: normal;
+  /* font-weight: 400; */
+  src: url('../fonts/hachi-maru-pop-v17-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/hachi-maru-pop-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/hachi-maru-pop-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/hachi-maru-pop-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/hachi-maru-pop-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/hachi-maru-pop-v17-latin-regular.svg#HachiMaruPop') format('svg'); /* Legacy iOS */
+}
 #regForm {
   background-color: #ffffff;  
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
