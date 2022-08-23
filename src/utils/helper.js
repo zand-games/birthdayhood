@@ -36,12 +36,7 @@ function get_comma_format_color(element) {
 }
 
 export function calculate_result_data() {
-  const list_of_colors = [
-    BirthdayStore.mentalColor,
-    BirthdayStore.bodyColor,
-    BirthdayStore.socialColor,
-    BirthdayStore.jobColor,
-  ];
+  const list_of_colors = [BirthdayStore.mentalColor, BirthdayStore.bodyColor];
   const _avg_color =
     BirthdayStore.lost == false
       ? get_average(list_of_colors)

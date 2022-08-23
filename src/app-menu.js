@@ -5,6 +5,7 @@ import { BaseComponent } from "./baseComponent.js";
 import { StoreSubscriber } from "lit-svelte-stores";
 import "./birthday-app";
 import "./person-simple";
+import "./export-data";
 export class AppMenu extends BaseComponent {
   _store = new StoreSubscriber(this, () => appStore);
   store2 = new StoreSubscriber(this, () => {
@@ -61,7 +62,7 @@ export class AppMenu extends BaseComponent {
                 href="#"
                 data-abc="true"
                 @click="${this.menuClicked}"
-                >Simple <span class="sr-only">(current)</span></a
+                >Feeling</a
               >
             </li>
             <li class="nav-item">
@@ -71,14 +72,18 @@ export class AppMenu extends BaseComponent {
                 @click="${this.menuClicked}"
                 href="#"
                 data-abc="true"
-                >Complete</a
+                >Color-Mood</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" data-abc="true">Koln</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-abc="true">Report</a>
+              <a
+                @click="${this.menuClicked}"
+                id="export"
+                class="nav-link"
+                href="#"
+                data-abc="true"
+                >Export</a
+              >
             </li>
           </ul>
         </div>
@@ -97,6 +102,12 @@ export class AppMenu extends BaseComponent {
             ? "inline"
             : "none"}"
         ></person-simple>
+
+        <export-data
+          style="display:${this._store.value.menu == "export"
+            ? "inline"
+            : "none"}"
+        ></export-data>
       </div>
     `;
   }

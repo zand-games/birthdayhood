@@ -352,10 +352,25 @@ export class BirthdayResult extends LitElement {
 
         <!-- </g> -->
       </svg>
+      <br />
+      <br />
+      <input
+        class="contact"
+        @change="${this.contact_changed}"
+        type="text"
+        id="contact"
+        placeholder="Contact"
+      />
+      <br />
+      <br />
       <button id="download" @click="${this.export_svg_to_img}" value="Download">
         Download
       </button>
+      <br />
+      <br />
       <canvas style="display:inline;" id="myCanvas"></canvas>
+      <br />
+      <br />
 
       <a id="link"></a>
     `;
@@ -370,29 +385,13 @@ export class BirthdayResult extends LitElement {
 
     v.start();
     // await new Promise((r) => setTimeout(r, 300));
-    svgc.style.display = "none";
+    //  svgc.style.display = "none";
   }
   async export_svg_to_img(e) {
     let btn_size = e.target.id;
     const canvas = this.shadowRoot.querySelector("canvas");
     const svg = this.shadowRoot.querySelector("svg");
-    let svg_content = "";
-    switch (btn_size) {
-      case "insta_story":
-        svg_content = this.resize_svg("1080", "1920");
-        break;
-
-      case "insta_post":
-        svg_content = this.resize_svg("1080", "1080");
-        break;
-
-      case "twitter":
-        svg_content = this.resize_svg("450", "900");
-        break;
-      case "download":
-        svg_content = this.resize_svg("400", "300");
-        break;
-    }
+    let svg_content = this.resize_svg("400", "300");
     const ctx = canvas.getContext("2d");
 
     let v = Canvg.fromString(ctx, svg_content);
@@ -402,14 +401,28 @@ export class BirthdayResult extends LitElement {
 
     var link = this.shadowRoot.getElementById("link");
     link.style.display = "none";
-    link.setAttribute("download", "birdayhood.png");
+    var filename = this.contact ? this.contact : this.get_color_hashtag();
+    link.setAttribute("download", filename + ".png");
     link.setAttribute(
       "href",
       canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
     );
     link.click();
-    v.stop();
+
+    var item = {
+      contact: this.contact,
+      color: this.get_color_hashtag(),
+      time: new Date().toLocaleString(),
+    };
+    localStorage.setItem(
+      "complete_checkin_" + this.uuidv4(),
+      JSON.stringify(item)
+    );
   }
+  contact_changed(e) {
+    this.contact = e.target.value;
+  }
+  contact = "";
   resize_svg(width, height) {
     const svg = this.shadowRoot.querySelector("svg");
     var cloned_svg = svg.cloneNode(true);
@@ -431,7 +444,14 @@ export class BirthdayResult extends LitElement {
 
     return `${h1} ${this.get_hash_birthday()} ${this.get_feeling_hashtag()} ${this.get_color_hashtag()}  ${h3} ${h2} ${h5}`;
   }
-
+  uuidv4() {
+    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+      (
+        c ^
+        (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+      ).toString(16)
+    );
+  }
   get_hash_birthday() {
     return `#${BirthdayStore.year}_${BirthdayStore.monthName.toLowerCase()}_${
       BirthdayStore.day
@@ -450,6 +470,15 @@ export class BirthdayResult extends LitElement {
 
   static get styles() {
     return css`
+      .contact {
+        background-color: #e7edeb;
+        border: none;
+        color: black;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
       .wrapper {
         color: white;
         padding-right: 3%;

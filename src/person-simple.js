@@ -62,13 +62,6 @@ export class PersonSimple extends BaseComponent {
       return false;
     }
 
-    for (var i = 0; i < localStorage.length; i++) {
-      console.log(
-        localStorage.key(i),
-        localStorage.getItem(localStorage.key(i))
-      );
-    }
-
     var item = {
       contact: this.contact,
       color: this.color,
@@ -76,7 +69,7 @@ export class PersonSimple extends BaseComponent {
     };
 
     // Put the object into storage
-    localStorage.setItem(this.uuidv4(), JSON.stringify(item));
+    localStorage.setItem("simple_color_" + this.uuidv4(), JSON.stringify(item));
 
     alert("Data Stored! Thank you");
     var item = document.getElementById("simple_person_container");

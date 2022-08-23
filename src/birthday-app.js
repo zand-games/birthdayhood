@@ -57,9 +57,9 @@ export class BirthdayApp extends BaseComponent {
                   <button type="button" id="nextBtn" @click="${this.next}">
                     <i class="fa fa-angle-double-right"></i>
                   </button>
-                  <button type="button" id="btnlog" @click="${this.log}">
+                  <!-- <button type="button" id="btnlog" @click="${this.log}">
                     <i class="fa fa-info"></i>
-                  </button>
+                  </button> -->
                 </div>
               </div>
               <!-- Tabs -->
