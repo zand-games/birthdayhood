@@ -366,6 +366,10 @@ export class BirthdayResult extends LitElement {
       <button id="download" @click="${this.export_svg_to_img}" value="Download">
         Download
       </button>
+      <button id="reset" @click="${this.reloadpage}" value="reset">
+        Reset
+      </button>
+
       <br />
       <br />
       <canvas style="display:inline;" id="myCanvas"></canvas>
@@ -375,6 +379,10 @@ export class BirthdayResult extends LitElement {
       <a id="link"></a>
     `;
   }
+  reloadpage() {
+    window.location.reload();
+  }
+
   async start_canvas_result() {
     const canvas = this.shadowRoot.querySelector("canvas");
     const svgc = this.shadowRoot.querySelector("svg");
