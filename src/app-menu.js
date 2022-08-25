@@ -37,6 +37,22 @@ export class AppMenu extends BaseComponent {
       console.log(val.menu);
       return val;
     });
+
+    if (e.target.id == "complete") {
+      var container = document.getElementById("container_app");
+      var result_component = document.createElement("birthday-app");
+      container.replaceChildren(result_component);
+    }
+    if (e.target.id == "simple") {
+      var container = document.getElementById("container_app");
+      var result_component = document.createElement("person-simple");
+      container.replaceChildren(result_component);
+    }
+    if (e.target.id == "export") {
+      var container = document.getElementById("container_app");
+      var result_component = document.createElement("export-data");
+      container.replaceChildren(result_component);
+    }
   }
   render() {
     return html`
@@ -90,24 +106,9 @@ export class AppMenu extends BaseComponent {
       </nav>
       <div>
         <div id="${this._store.value.menu}"></div>
-        <div id="container_app"></div>
-        <birthday-app
-          style="display:${this._store.value.menu == "complete"
-            ? "inline"
-            : "none"}"
-        ></birthday-app>
-
-        <person-simple
-          style="display:${this._store.value.menu == "simple"
-            ? "inline"
-            : "none"}"
-        ></person-simple>
-
-        <export-data
-          style="display:${this._store.value.menu == "export"
-            ? "inline"
-            : "none"}"
-        ></export-data>
+        <div id="container_app">
+          <!-- <birthday-app></birthday-app> -->
+        </div>
       </div>
     `;
   }

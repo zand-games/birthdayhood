@@ -72,6 +72,7 @@ export class BirthdayApp extends BaseComponent {
           </div>
         </div>
       </div>
+      ${this.showTab(this.currentTab)}
     `;
   }
 
@@ -83,10 +84,11 @@ export class BirthdayApp extends BaseComponent {
 
   firstUpdated() {
     super.firstUpdated();
+    debugger;
     this.currentTab = 0;
 
     window.addEventListener("DOMContentLoaded", (e) => {
-      this.showTab(this.currentTab);
+      debugger;
     });
   }
 

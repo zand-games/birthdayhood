@@ -366,10 +366,6 @@ export class BirthdayResult extends LitElement {
       <button id="download" @click="${this.export_svg_to_img}" value="Download">
         Download
       </button>
-      <button id="reset" @click="${this.reloadpage}" value="reset">
-        Reset
-      </button>
-
       <br />
       <br />
       <canvas style="display:inline;" id="myCanvas"></canvas>
